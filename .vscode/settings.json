@@ -1,0 +1,20 @@
+{
+	"files.eol": "\n",
+	"eslint.packageManager": "yarn",
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"editor.detectIndentation": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"css.validate": false,
+	"scss.validate": false,
+	"editor.formatOnSave": true,
+	"[javascript]": {
+		"editor.formatOnSave": false
+	},
+	"[vue]": {
+		"editor.formatOnSave": false
+	},
+	"eslint.validate": ["vue", "html", "javascript", "typescript"]
+}
