@@ -1,10 +1,8 @@
 <template>
   <v-app>
-	<div class="app__wrapper">
+	<div class="portfolio">
 		<app-header />
-			<div class="app__content">
-				<Nuxt />
-			</div>
+			<Nuxt />
 		<app-footer />
 	</div>
   </v-app>
@@ -19,8 +17,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.app__content{
-	background: url('~assets/images/body-background.jpg');
-}
+<style lang="postcss">
 </style>

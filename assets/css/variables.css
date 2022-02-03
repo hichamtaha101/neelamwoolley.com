@@ -1,17 +1,17 @@
 :root {
 	/* darker grey; */
-	--main-color: #172b4d;
-	/* dark grey */
-	--secondary-color-1: #545454;
-	/* light grey */
-	--secondary-color-2: #e1e1e1;
-	/* lighter grey */
-	--secondary-color-3: #f0f0f0;
+	--main-color: #3c3642;
+	/* darker blue */
+	--secondary-color-1: #102544;
+	/* dark blue */
+	--secondary-color-2: #17335c;
+	/* blue */
+	--secondary-color-3: #2f69bb;
 	/* grey */
-	--secondary-color-4: #c8c8c8;
-	/* white */
-	--secondary-color-5: #ffffff;
-	--font-header: "Nunito Sans";
+	--secondary-color-4: #33333340;
+	/* almost white */
+	--secondary-color-5: #ffffff12;
+	--font-header: "Exo";
 	--font-0: "Nunito Sans";
 	--font-1: "sans-serif";
 	--font-2: Verdana;
