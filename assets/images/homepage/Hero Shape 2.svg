@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1018.78" height="959.77" viewBox="0 0 1018.78 959.77">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.071"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Hero_Shape_2" data-name="Hero Shape 2" transform="translate(-887 -107)">
+    <path id="Path_12" data-name="Path 12" d="M418.421,0H1018.78V958H0Z" transform="translate(887 107)" fill="#2f69bb"/>
+    <path id="Path_22" data-name="Path 22" d="M1348.421,0l308.515,1.77v958L930,958Z" transform="translate(247.227 107)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

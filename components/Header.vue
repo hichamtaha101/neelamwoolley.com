@@ -1,6 +1,6 @@
 <template>
-  <div class="header flex justify-between items-center">
-	  <div class="logo">Neelam Woolley</div>
+  <div class="header flex justify-between items-center z-20 relative">
+	  <div class="logo text-2xl uppercase">Neelam <span class="font-bold">Woolley</span></div>
 	  <div>
 		  <div class="nav-items flex flex-wrap gap-16 uppercase">
 		  	<div>Design</div>
