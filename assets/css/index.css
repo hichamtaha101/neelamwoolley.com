@@ -7,12 +7,11 @@
 body {
 	font-family: var(--font-0), var(--font-1), var(--font-2), var(--font-3),
 		var(--font-4);
-	color: var(--main-color);
 	padding: 0 !important;
 }
 
 a {
-	color: var(--main-color);
+	color: white !important;
 	text-decoration: none;
 }
 
@@ -31,4 +30,80 @@ h6,
 	font-family: var(--font-header), var(--font-0), var(--font-1), var(--font-2),
 		var(--font-3), var(--font-4);
 	font-weight: bold;
+}
+
+.nw {
+	&-content-wrap {
+		background-color: var(--main-color);
+		> div {
+			padding-left: 140px;
+			padding-right: 140px;
+		}
+	}
+	&-button {
+		@add-mixin nw-button-styles;
+		color: white;
+		background-color: var(--secondary-color-3);
+		&:hover {
+			background-color: #285da7;
+		}
+
+		&--inverse {
+			@add-mixin nw-button-styles;
+			color: var(--secondary-color-3);
+			background-color: white;
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+	}
+	&-section {
+		padding-top: 78px;
+		padding-bottom: 78px;
+	}
+	&-section-divider {
+		background-color: var(--main-color);
+		background-image: linear-gradient(
+			to right,
+			#777777 33%,
+			rgba(255, 255, 255, 0) 0%
+		);
+		background-position: top;
+		background-size: 8px 3px;
+		background-repeat: repeat-x;
+		height: 3px;
+		margin-left: 140px;
+		margin-right: 140px;
+	}
+	&-section-divider-title {
+		color: #777777;
+	}
+	&-section__content {
+		margin-top: 68px;
+		&__design {
+			background: #282828;
+		}
+		&__illustration {
+			height: 392px;
+			background: #282828;
+			div {
+				background-color: #f4f4f4;
+				&::before {
+					content: "";
+					width: 0;
+					position: absolute;
+					height: 100%;
+					bottom: 0px;
+					left: -20px;
+					border-bottom: 48px solid #f4f4f4;
+					border-left: 20px solid transparent;
+				}
+			}
+			&.empty {
+				/* background-image: url('~/assets/images/'); */
+				/* background-size: cover; */
+				/* background-position: center center; */
+			}
+		}
+	}
 }
