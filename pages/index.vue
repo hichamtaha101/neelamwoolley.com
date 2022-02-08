@@ -245,7 +245,7 @@ export default {
 		}
 		&-section__content__illustration {
 			&:nth-child(1) {
-				background-image: url(~/assets/images/homepage/Skull Girl 2.png);
+				background-image: url(~/assets/images/homepage/Skull girl 2.png);
 			}
 			&:nth-child(2) {
 				background-image: url(~/assets/images/homepage/DRAWING_2jpg-Recovered.png);
