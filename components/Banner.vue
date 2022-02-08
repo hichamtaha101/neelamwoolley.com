@@ -1,6 +1,6 @@
 <template>
 	<div class="nw-banner relative text-white" :style="imageUrl ? 'background-image: url(/illustration-banner.png)' : '' ">
-		<div class="nw-banner__learn-more absolute">Scroll To Learn More <i class="fa fa-caret-down" /></div>
+		<div class="nw-banner__learn-more absolute bottom-0">Scroll To Learn More <i class="fa fa-caret-down" /></div>
 		<div class="nw-banner__title absolute text-2xl">
 			<div class="flex">
 				<div class="parallelogram-right"></div>
@@ -33,7 +33,6 @@ export default {
 	background-size: cover;
 	background-repeat: no-repeat;
 	&__learn-more {
-		bottom: 0px;
 		padding: 15px;
 		padding-left: 155px;
 		background-color: var(--secondary-color-3);
@@ -42,7 +41,7 @@ export default {
 			width: 0;
 			position: absolute;
 			height: 100%;
-			bottom: 0px;
+			top: 0;
 			right: -24px;
 			border-bottom: 54px solid var(--secondary-color-3);
 			border-right: 24px solid transparent;
