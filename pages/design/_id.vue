@@ -25,13 +25,53 @@
 				</div>
 			</div>
 			<div class="nw-project-sidebar-block ml-auto"></div>
-			<div class="nw-project-sidebar fixed right-0 pl-3 pb-3">
-				<div class="h-full py-11 px-12">
-					<section-title title="WEB APPLICATION" subTitle="VANCOUVER BITCOIN"/>
-					
-					<div class="nw-section-divider-title uppercase pb-1 pt-12">Prototype URL</div>
-					<div class="nw-project-divider" />
-					<div class="nw-project-nda-locked w-full bg-black mt-6 py-2 px-8">NDA Locked</div>
+			<div class="nw-project-sidebar fixed right-0">
+				<div class="pl-3 pb-3">
+					<div class="h-full py-11 px-12">
+						<section-title title="WEB APPLICATION" subTitle="VANCOUVER BITCOIN"/>
+						
+						<div class="nw-section-divider-title pb-1 mt-12">PROTOTYPE URL</div>
+						<div class="nw-project-divider" />
+
+						<div class="nw-project-nda-locked w-full bg-black mt-7 py-2 px-8 relative">
+							<i class="fa fa-lock text-black absolute top-0 left-1 z-20 text-xs"></i>
+							NDA Locked
+						</div>
+
+						<div class="nw-section-divider-title pb-1 mt-7">PROTOTYPE DIMENSIONS</div>
+						<div class="nw-project-divider" />
+
+						<div class="flex mt-7">
+							<div class="w-32">Desktop</div>
+							<div><b>1920x1080</b></div>
+						</div>
+						<div class="flex">
+							<div class="w-32">Mobile</div>
+							<div><b>N/A</b></div>
+						</div>
+
+						<div class="nw-section-divider-title pb-1 mt-7">PROGRAMS</div>
+						<div class="nw-project-divider" />
+
+						<div class="flex gap-4 mt-7">
+							<img src="~/assets/images/photoshop-icon.png" alt="Photoshop">
+							<img src="~/assets/images/illustrator-icon.png" alt="Illustrator">
+							<img src="~/assets/images/xd-icon.png" alt="XD">
+						</div>
+
+						<div class="nw-section-divider-title pb-1 mt-7">OVERVIEW</div>
+						<div class="nw-project-divider" />
+						<p class="mt-6">Lead Designer for Vancouver Bitcoin's website initiative. I was hired to redesign their existing website under a new set of branding guidelines.</p>
+					</div>
+				</div>
+				<div class="mt-6 ml-6 flex gap-4">
+					<img 
+					width="91px" 
+					height="91px" 
+					src="~/assets/images/design/Dot Block grey.svg" 
+					alt="Dot Block Grey" 
+					v-for="n in 5"
+					:key="n">
 				</div>
 			</div>
 		</div>
@@ -68,6 +108,16 @@ export default {
 		&-nda-locked {
 			border-radius: 3px;
 			border: 5px solid #FFFFFF;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 0;
+				border-top: 30px solid white;
+				border-right: 30px solid transparent;
+			}
 		}
 
 		&-images {
@@ -91,10 +141,12 @@ export default {
 			margin-top: -10px;
 			max-width: 676px;
 			width: 100%;
-			height: 750px;
-			border: 10px solid #2D2932;
-			>div {
-				background: #2D2932;
+			>div:first-child {
+				border: 10px solid #2D2932;
+				height: 750px;
+				>div {
+					background: #2D2932;
+				}
 			}
 		}
 	}
