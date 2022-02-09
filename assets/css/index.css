@@ -32,6 +32,10 @@ h6,
 	font-weight: bold;
 }
 
+.page {
+	padding-top: 120px;
+}
+
 .nw {
 	&-content-wrap {
 		background-color: var(--main-color);
@@ -57,21 +61,13 @@ h6,
 			}
 		}
 	}
+
 	&-section {
 		padding-top: 78px;
 		padding-bottom: 78px;
 	}
 	&-section-divider {
-		background-color: var(--main-color);
-		background-image: linear-gradient(
-			to right,
-			#777777 33%,
-			rgba(255, 255, 255, 0) 0%
-		);
-		background-position: top;
-		background-size: 8px 3px;
-		background-repeat: repeat-x;
-		height: 3px;
+		@add-mixin dotted-line-styles var(--main-color);
 		margin-left: 140px;
 		margin-right: 140px;
 	}
@@ -86,6 +82,7 @@ h6,
 		&__illustration {
 			height: 392px;
 			background: #282828;
+			background-position: center;
 			div {
 				background-color: #f4f4f4;
 				&::before {

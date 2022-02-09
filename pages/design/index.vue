@@ -134,15 +134,10 @@ export default {
 			color: var(--secondary-color-3);
 		}
 		div:nth-child(3) {
-			    background-color: var(--secondary-color-3);
-				background-image: linear-gradient(to right, #ffffff 33%, rgba(255,255,255,0) 0%);
-				background-position: top;
-				background-size: 8px 3px;
-				background-repeat: repeat-x;
-				height: 3px;
-				padding-bottom: 15px;
-				margin-top: 15px;
-				opacity: 0.5;
+			@add-mixin dotted-line-styles var(--secondary-color-3), #ffffff;
+			padding-bottom: 15px;
+			margin-top: 15px;
+			opacity: 0.5;
 		}
 	}
 }

@@ -43,7 +43,7 @@
 					<div class="uppercase">{{ wd.title }}</div>
 					<div class="pt-2 text-sm"><i class="fa fa-tag mr-1" style="color: #3069bb"/>{{ wd.tag }}</div>
 					<div class="pt-6 text-sm pb-4">{{ wd.briefDescription }}</div>
-					<div class="nw-button nw-button--full-w items-center flex mt-auto" @click="$router.push('/design/69')">
+					<div class="nw-button nw-button--full-w items-center flex mt-auto" @click="$router.push(wd.link)">
 						<i class="fa fa-caret-right mr-4 text-xl" />
 						View Project
 					</div>
@@ -62,21 +62,21 @@
 					<div 
 						@click="$router.push('/illustration')" 
 						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-						<img src="~/assets/images/homepage/arrow-right-regular-1.svg" alt="Arrow Right">
+						<img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
 					</div>
 				</div>
 				<div class="nw-section__content__illustration relative">
 					<div 
 						@click="$router.push('/illustration')" 
 						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-						<img src="~/assets/images/homepage/arrow-right-regular-1.svg" alt="Arrow Right">
+						<img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
 					</div>
 				</div>
 				<div class="nw-section__content__illustration relative">
 					<div
 						@click="$router.push('/illustration')" 
 						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-						 <img src="~/assets/images/homepage/arrow-right-regular-1.svg" alt="Arrow Right">
+						 <img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
 					</div>
 				</div>
 			</div>
@@ -125,7 +125,7 @@ export default {
 					briefDescription: 'UI/UX website design for the Quickmint NFT e-commerce website.',
 					imgSrc: '~/assets/images/homepage/',
 					imgAlt: 'Quickmint Thumbnail',
-					link: ''
+					link: '/design/quick-mint'
 				},
 				{ 
 					title: 'Henesys Group | SAAS', 
@@ -133,7 +133,7 @@ export default {
 					briefDescription: 'UX/UI Design for the Henesys Group SaaS.',
 					imgSrc: '~/assets/images/homepage/',
 					imgAlt: 'Henesys Group Thumbnail',
-					link: ''
+					link: '/design/henesys-group'
 				},
 				{ 
 					title: 'Vancouver Bitcoin | Website', 
@@ -141,7 +141,7 @@ export default {
 					briefDescription: 'UI/UX website design for a Vancouver based cryptocurrency brokerage firm.',
 					imgSrc: '~/assets/images/homepage/',
 					imgAlt: 'Vancouver Bitcoin Thumbnail',
-					link: ''
+					link: '/design/vancouver-bitcoin'
 				},
 				{ 
 					title: 'Bittreo | Web Application', 
@@ -149,7 +149,7 @@ export default {
 					briefDescription: 'UI/UX design for a web based crypto currency brokerage application.',
 					imgSrc: '~/assets/images/homepage/',
 					imgAlt: 'Bittreo Thumbnail',
-					link: ''
+					link: '/design/bittreo'
 				},
 			],
 		}
@@ -246,12 +246,15 @@ export default {
 		&-section__content__illustration {
 			&:nth-child(1) {
 				background-image: url(~/assets/images/homepage/Skull girl 2.png);
+				background-position: center top;
 			}
 			&:nth-child(2) {
 				background-image: url(~/assets/images/homepage/DRAWING_2jpg-Recovered.png);
+				background-position: center top;
 			}
 			&:nth-child(3) {
 				background-image: url(~/assets/images/homepage/Doodle 13 - Kistune.png);
+				background-position: center top;
 			}
 		}
 	}

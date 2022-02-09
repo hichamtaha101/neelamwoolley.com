@@ -25,10 +25,14 @@
 				</section-title>
 
 				<div class="nw-section__content grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
-					<div class="nw-section__content__illustration relative" v-for="( vii, viii ) in vi.images.slice(0, 3)" :key="`vii_${viii}`">
+					<div 
+					class="nw-section__content__illustration relative"
+					:style="`background-image: url(${vii.url});`"
+					v-for="( vii, viii ) in vi.images.slice(0, 3)"
+					:key="`vii_${viii}`">
 						<div 
 							class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-							<img src="~/assets/images/homepage/arrow-right-regular-1.svg" alt="Arrow Right">
+							<img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
 						</div>
 					</div>
 					<div class="nw-section__content__illustration empty relative" v-for="vie in vi.images.length > 3 ? 0 : 3 - vi.images.length " :key="`vie_${vie}`" />
@@ -54,10 +58,14 @@
 					</template>
 				</section-title>
 				<div class="nw-section__content grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
-					<div class="nw-section__content__illustration relative" v-for="( ri, rii ) in ri.images.slice(0, 3)" :key="`ri_${rii}`">
+					<div
+					:style="`background-image: url(${rii.url});${rii.styles}`"
+					class="nw-section__content__illustration relative" 
+					v-for="( rii, riii ) in ri.images.slice(0, 3)" 
+					:key="`ri_${riii}`">
 						<div 
 							class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-							<img src="~/assets/images/homepage/arrow-right-regular-1.svg" alt="Arrow Right">
+							<img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
 						</div>
 					</div>
 					<div class="nw-section__content__illustration empty relative" v-for="rie in ri.images.length > 3 ? 0 : 3 - ri.images.length " :key="`rie_${rie}`" />
@@ -79,29 +87,46 @@ export default {
 				{
 					sectionTitle: 'Vector',
 					sectionSubTitle: 'Crocodiles',
-					images: []
+					images: [
+						{ url: '/crocodile-1.png', styles: '' },
+						{ url: '/crocodile-2.png', styles: '' },
+						{ url: '/crocodile-3.png', styles: '' },
+					]
 				},
 				{
 					sectionTitle: 'Vector',
 					sectionSubTitle: 'Environments',
-					images: []
+					images: [
+						{ url: '/environment-1.png', styles: '' },
+						{ url: '/environment-2.png', styles: '' },
+						{ url: '/environment-3.png', styles: '' },
+					]
 				}
 			],
 			rasterIllustrations: [
 				{
 					sectionTitle: 'Dragon',
 					sectionSubTitle: 'Series',
-					images: []
+					images: [
+						{ url: '/dragon-1.png', styles: 'background-position: center top; background-size: cover' },
+						{ url: '/dragon-2.png', styles: 'background-position: center top; background-size: cover' },
+					]
 				},
 				{
 					sectionTitle: 'Skull',
 					sectionSubTitle: 'Series',
-					images: []
+					images: [
+						{ url: '/skull-girl-2.png', styles: 'background-position: center top;' },
+						{ url: '/skull-girl-5.png', styles: 'background-position: center top;' },
+					]
 				},
 				{
 					sectionTitle: 'Line',
 					sectionSubTitle: 'Drawings',
-					images: []
+					images: [
+						{ url: '/line-drawings-1.png', styles: '' },
+						{ url: '/line-drawings-2.png', styles: 'background-position: center top' },
+					]
 				},
 				{
 					sectionTitle: 'Traditional',

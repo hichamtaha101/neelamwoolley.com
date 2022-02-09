@@ -1,5 +1,5 @@
 <template>
 	<div class="page illustration">
-		specific-illustration
+		page development in-progress
 	</div>
 </template>

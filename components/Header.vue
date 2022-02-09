@@ -1,5 +1,5 @@
 <template>
-  <div class="header flex justify-between items-center z-20 relative">
+  <div class="header fixed flex justify-between items-center z-40 w-full">
 	  <div class="logo text-2xl uppercase">
 			<NuxtLink to="/">
 			  	Neelam <span class="font-bold">Woolley</span>

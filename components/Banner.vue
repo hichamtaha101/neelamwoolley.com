@@ -1,5 +1,6 @@
 <template>
 	<div class="nw-banner relative text-white" :style="imageUrl ? 'background-image: url(/illustration-banner.png)' : '' ">
+		<div class="nw-banner__overlay opacity-60" />
 		<div class="nw-banner__learn-more absolute bottom-0">Scroll To Learn More <i class="fa fa-caret-down" /></div>
 		<div class="nw-banner__title absolute text-2xl">
 			<div class="flex">
@@ -32,6 +33,11 @@ export default {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	&__overlay {
+		width: 100%;
+		height: 100%;
+		background: transparent linear-gradient(180deg, #000000A6 0%, #000000 100%) 0% 0% no-repeat padding-box;
+	}
 	&__learn-more {
 		padding: 15px;
 		padding-left: 155px;

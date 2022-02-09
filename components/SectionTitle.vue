@@ -1,5 +1,5 @@
 <template>
-	<div class="nw-section__title text-white uppercase flex flex-wrap justify-between items-center">
+	<div :class="`nw-section__title text-white uppercase flex flex-wrap justify-between items-center ${classNames}`">
 		<div class="flex">
 			<img src="~/assets/images/homepage/heading shapes.svg" alt="heading shape">
 			<div class="pl-1">
@@ -16,7 +16,8 @@
 </template>
 <script>
 export default {
-	props: { 
+	props: {
+		classNames: { type: String, required: false, default: '' },
 		title: { type: String, required: true, default: '' },
 		subTitle: { type: String, required: true, default: '' },
 		buttonText: { type: String, required: false, default: '' },
