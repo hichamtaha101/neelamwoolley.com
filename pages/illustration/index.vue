@@ -1,6 +1,6 @@
 <template>
 	<div class="page illustration">
-		<banner featured-text="Illustration" image-url="~/assets/images/illustration/Mask Group 8.png"/>
+		<banner featured-text="Illustration" image-url="~/assets/images/illustration/dragon-header.png"/>
 
 		<!-- Main Illustration Section -->
 		<div class="nw-content-wrap z-20 relative">
@@ -27,9 +27,9 @@
 				<div class="nw-section__content grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
 					<div 
 					class="nw-section__content__illustration relative"
-					:style="`background-image: url(${vii.url});`"
 					v-for="( vii, viii ) in vi.images.slice(0, 3)"
 					:key="`vii_${viii}`">
+					<img class="h-full" :src="require(`~/assets/images/illustration/${vii.image}`)" :alt="vii.alt || 'illustration image'">
 						<div 
 							class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
 							<img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
@@ -59,10 +59,10 @@
 				</section-title>
 				<div class="nw-section__content grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
 					<div
-					:style="`background-image: url(${rii.url});${rii.styles}`"
 					class="nw-section__content__illustration relative" 
 					v-for="( rii, riii ) in ri.images.slice(0, 3)" 
 					:key="`ri_${riii}`">
+					<img class="h-full" :src="require(`~/assets/images/illustration/${rii.image}`)" :alt="rii.alt || 'illustration image'">
 						<div 
 							class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
 							<img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
@@ -88,18 +88,18 @@ export default {
 					sectionTitle: 'Vector',
 					sectionSubTitle: 'Crocodiles',
 					images: [
-						{ url: '/crocodile-1.png', styles: '' },
-						{ url: '/crocodile-2.png', styles: '' },
-						{ url: '/crocodile-3.png', styles: '' },
+						{ image: 'crocodile-1.png' },
+						{ image: 'crocodile-2.png' },
+						{ image: 'crocodile-3.png' },
 					]
 				},
 				{
 					sectionTitle: 'Vector',
 					sectionSubTitle: 'Environments',
 					images: [
-						{ url: '/environment-1.png', styles: '' },
-						{ url: '/environment-2.png', styles: '' },
-						{ url: '/environment-3.png', styles: '' },
+						{ image: 'environment-1.png' },
+						{ image: 'environment-2.png' },
+						{ image: 'environment-3.png' },
 					]
 				}
 			],
@@ -108,30 +108,32 @@ export default {
 					sectionTitle: 'Dragon',
 					sectionSubTitle: 'Series',
 					images: [
-						{ url: '/dragon-1.png', styles: 'background-position: center top; background-size: cover' },
-						{ url: '/dragon-2.png', styles: 'background-position: center top; background-size: cover' },
+						{ image: 'dragon-1.png' },
+						{ image: 'dragon-2.png' },
 					]
 				},
 				{
 					sectionTitle: 'Skull',
 					sectionSubTitle: 'Series',
 					images: [
-						{ url: '/skull-girl-2.png', styles: 'background-position: center top;' },
-						{ url: '/skull-girl-5.png', styles: 'background-position: center top;' },
+						{ image: 'skull-girl-1.png' },
+						{ image: 'skull-girl-2.png' },
 					]
 				},
 				{
 					sectionTitle: 'Line',
 					sectionSubTitle: 'Drawings',
 					images: [
-						{ url: '/line-drawings-1.png', styles: '' },
-						{ url: '/line-drawings-2.png', styles: 'background-position: center top' },
+						{ image: 'line-drawing-1.png' },
+						{ image: 'line-drawing-2.png' },
 					]
 				},
 				{
 					sectionTitle: 'Traditional',
 					sectionSubTitle: 'Line Drawings',
-					images: []
+					images: [
+						{ image: 'traditional-line-drawing-1.png' }
+					]
 				},
 			]
 		}

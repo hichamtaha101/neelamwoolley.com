@@ -80,7 +80,7 @@ h6,
 			background: #282828;
 		}
 		&__illustration {
-			height: 392px;
+			max-width: 536px;
 			background: #282828;
 			background-position: center;
 			div {
@@ -97,9 +97,9 @@ h6,
 				}
 			}
 			&.empty {
-				/* background-image: url('~/assets/images/'); */
-				/* background-size: cover; */
-				/* background-position: center center; */
+				background-image: url("~assets/images/illustration/empty-illustration.png");
+				background-size: cover;
+				background-position: center center;
 			}
 		}
 	}

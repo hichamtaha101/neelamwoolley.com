@@ -1,6 +1,8 @@
 <template>
 	<div class="page design relative z-30">
-		<div class="nw-project-wrap text-white flex relative">
+		<div class="nw-project-wrap text-white flex gap-4 relative">
+
+			<!-- Main Project Content Section -->
 			<div class="nw-project-content">
 				<div class="flex items-center pt-12 cursor-pointer hover:opacity-90 transition-opacity" @click="$router.push('/design')">
 					<svg class="mr-4 rotate-90" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
@@ -13,7 +15,7 @@
 				</div>
 				<div class="pt-12">
 					<p>I was brought onto the project to refactor the UI/UX of the website with a focus on creating consistency with the content that already excited on the website.</p>
-					<p>Below are some screenshots of some select pages from the prototype. Unfortunately I'm unable to share the full prototype at this time due to the sensitive nature of client work. But you can check out the fully developed site at vancouverbitcoin.com</p>
+					<p>Below are some screenshots of some select pages from the prototype. Unfortunately I'm unable to share the full prototype at this time due to the sensitive nature of client work. But you can check out the fully developed site at <a href="https://vancouverbitcoin.com" target="_blank" class="underline pointer-cursor">vancouverbitcoin.com</a></p>
 				</div>
 				<div class="flex gap-3">
 					<div @click="activeView = 'desktop'" :class="`nw-switch py-1 px-3 cursor-pointer text-sm ${activeView === 'desktop' ? 'active' : ''}`">Desktop Samples</div>
@@ -23,7 +25,22 @@
 					<div></div>
 					<div></div>
 				</div>
+
+				<div class="pt-20 text-2xl"><h2>Graphic Design</h2></div>
+				<div class="pt12">
+					<p>The project had several pages that needed graphic design elements to bring them to life. Using the established brand colours, I created a set of consistently designed vector illustrations.</p>
+					<p>All assets were mocked up using Adobe Photoshop and finalized in Adobe Illustrator.</p>
+				</div>
+
+				<div class="pt-20 text-2xl"><h2>Similar Projects</h2></div>
+				<div class="py-12 grid gap-6 md:grid-cols-2 sm:grid-cols-1">
+					<design-card :design="{ title: '', tag: '', briefDescription: '', link: '', imgSrc: '', imgAlt: '' }" />
+					<design-card :design="{ title: '', tag: '', briefDescription: '', link: '', imgSrc: '', imgAlt: '' }" />
+				</div>
 			</div>
+
+
+			<!-- Fixed Sidebar Section -->
 			<div class="nw-project-sidebar-block ml-auto"></div>
 			<div class="nw-project-sidebar fixed right-0">
 				<div class="pl-3 pb-3">
@@ -79,9 +96,10 @@
 </template>
 <script>
 import SectionTitle from '~/components/SectionTitle.vue';
+import DesignCard from '~/components/DesignCard.vue';
 
 export default {
-	components: { SectionTitle },
+	components: { SectionTitle, DesignCard },
 	data() {
 		return {
 			activeView: 'desktop'

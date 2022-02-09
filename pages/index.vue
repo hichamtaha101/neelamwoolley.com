@@ -38,16 +38,7 @@
 		<div class="nw-section">
 			<section-title title="Featured" sub-title="Web Designs" button-text="View All Projects" button-icon-class-names="fas fa-mouse mr-2" button-link="/design"/>
 			<div class="nw-section__content grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-7 text-white">
-				<div class="nw-section__content__design p-3 flex flex-col" v-for="(wd, index) in webDesigns" :key="index">
-					<!-- <img :src="wd.imgSrc" :alt="wd.imgAlt"> -->
-					<div class="uppercase">{{ wd.title }}</div>
-					<div class="pt-2 text-sm"><i class="fa fa-tag mr-1" style="color: #3069bb"/>{{ wd.tag }}</div>
-					<div class="pt-6 text-sm pb-4">{{ wd.briefDescription }}</div>
-					<div class="nw-button nw-button--full-w items-center flex mt-auto" @click="$router.push(wd.link)">
-						<i class="fa fa-caret-right mr-4 text-xl" />
-						View Project
-					</div>
-				</div>
+				<design-card :design="wd" v-for="(wd, index) in webDesigns" :key="index" />
 			</div>
 		</div>
 		<div class="nw-section-divider-title pb-1">Scroll To Learn More <i class="fa fa-caret-down ml-1" /></div>
@@ -59,6 +50,7 @@
 			<section-title title="Featured" sub-title="Illustration" button-text="View All Projects" button-icon-class-names="fa fa-pencil mr-2" button-link="/illustration"/>
 			<div class="nw-section__content grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
 				<div class="nw-section__content__illustration relative">
+					<img class="h-full" :src="require(`~/assets/images/illustration/skull-girl-1.png`)" :alt="'illustration image'">
 					<div 
 						@click="$router.push('/illustration')" 
 						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
@@ -66,6 +58,7 @@
 					</div>
 				</div>
 				<div class="nw-section__content__illustration relative">
+					<img class="h-full" :src="require(`~/assets/images/illustration/dragon-1.png`)" :alt="'illustration image'">
 					<div 
 						@click="$router.push('/illustration')" 
 						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
@@ -73,6 +66,7 @@
 					</div>
 				</div>
 				<div class="nw-section__content__illustration relative">
+					<img class="h-full" :src="require(`~/assets/images/illustration/line-drawing-2.png`)" :alt="'illustration image'">
 					<div
 						@click="$router.push('/illustration')" 
 						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
@@ -112,9 +106,10 @@
 </template>
 <script>
 import SectionTitle from '~/components/SectionTitle.vue';
+import DesignCard from '~/components/DesignCard.vue';
 
 export default {
-	components: { SectionTitle },
+	components: { SectionTitle, DesignCard },
 	data() {
 		return {
 			quote: "I specialize in creating high fidelity prototypes that are development ready.",
@@ -237,20 +232,6 @@ export default {
 			>div:nth-child(4) { 
 				width: 509px;
 				background-color: #3d73c0 
-			}
-		}
-		&-section__content__illustration {
-			&:nth-child(1) {
-				background-image: url(~/assets/images/homepage/Skull girl 2.png);
-				background-position: center top;
-			}
-			&:nth-child(2) {
-				background-image: url(~/assets/images/homepage/DRAWING_2jpg-Recovered.png);
-				background-position: center top;
-			}
-			&:nth-child(3) {
-				background-image: url(~/assets/images/homepage/Doodle 13 - Kistune.png);
-				background-position: center top;
 			}
 		}
 	}
