@@ -99,7 +99,7 @@
 				</div>
 			</div>
 			<!-- Right Side -->
-			<div class="nw-section-rectangles flex ml-4 justify-end">
+			<div class="nw-section-rectangles flex ml-auto justify-end">
 				<div></div>
 				<div></div>
 				<div></div>
@@ -221,25 +221,21 @@ export default {
 		&-content-wrap > div:last-child { padding-right: 0px; }
 		&-section-rectangles {
 			>div:nth-child(1) { 
-				max-width: 20px;
-				width: 100%;
+				width: 20px;
 				background-color: var(--secondary-color-3);
 				margin-right: 18px;
 			}
 			>div:nth-child(2) {
-				max-width: 40px;
-				width: 100%;
+				width: 40px;
 				background-color: var(--secondary-color-3);
 				margin-right: 18px;
 			}
 			>div:nth-child(3) { 
-				max-width: 209px;
-				width: 100%;
+				width: 209px;
 				background-color: var(--secondary-color-3); 
 			}
 			>div:nth-child(4) { 
-				max-width: 509px;
-				width: 100%;
+				width: 509px;
 				background-color: #3d73c0 
 			}
 		}
