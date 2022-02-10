@@ -1,5 +1,5 @@
 <template>
-<div class="page homepage">
+<div class="nw-page homepage">
 
 	<!-- Hero Section Overlay And Content -->
 	<div class="hero-section-overlay absolute flex z-10 top-0 right-0">
@@ -37,7 +37,7 @@
 		<!-- Featured Design Section -->
 		<div class="nw-section">
 			<section-title title="Featured" sub-title="Web Designs" button-text="View All Projects" button-icon-class-names="fas fa-mouse mr-2" button-link="/design"/>
-			<div class="nw-section__content grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-7 text-white">
+			<div class="nw-section__content grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-1 gap-7 text-white">
 				<design-card :design="fd" v-for="(fd, index) in featuredDesigns" :key="index" />
 			</div>
 		</div>
@@ -107,19 +107,14 @@
 <script>
 import SectionTitle from '~/components/SectionTitle.vue';
 import DesignCard from '~/components/DesignCard.vue';
-import { mapGetters } from 'vuex';
+import designs from '~/assets/js/designs';
 
 export default {
 	components: { SectionTitle, DesignCard },
 	data() {
 		return {
 			quote: "I specialize in creating high fidelity prototypes that are development ready.",
-		}
-	},
-	computed: {
-		...mapGetters( ['designs'] ),
-		featuredDesigns() {
-			return Object.values( this.designs ).filter( d => !!d.featured === true )
+			featuredDesigns: Object.values( designs ).filter( d => !!d.featured === true ),
 		}
 	},
 	mounted() {

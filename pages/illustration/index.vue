@@ -1,5 +1,5 @@
 <template>
-	<div class="page illustration">
+	<div class="nw-page illustration">
 		<banner featured-text="Illustration" image-url="~/assets/images/illustration/dragon-header.png"/>
 
 		<!-- Main Illustration Section -->
@@ -16,7 +16,7 @@
 							<img 
 							width="69px" 
 							height="69px" 
-							src="~/assets/images/design/Dot Block grey.svg" 
+							src="~/assets/images/designs/Dot Block grey.svg" 
 							alt="Dot Block Grey" 
 							v-for="n in index + 1"
 							:key="`vi_${n}_dot`">
@@ -50,7 +50,7 @@
 							<img 
 							width="69px" 
 							height="69px" 
-							src="~/assets/images/design/Dot Block grey.svg" 
+							src="~/assets/images/designs/Dot Block grey.svg" 
 							alt="Dot Block Grey" 
 							v-for="n in index + vectorIllustrations.length + 1"
 							:key="`ri_${n}_dot`">
@@ -137,6 +137,17 @@ export default {
 				},
 			]
 		}
-	}
+	},
+	head() {
+		return {
+			title: 'Illustration',
+			// Page specific SEO.
+			meta: [{
+				hid: 'description',
+				name: 'description',
+				content: 'Directory of UI/UX illustrations developed by Neelam Woolley throughout the years.',
+			}],
+		};
+	},
 }
 </script>

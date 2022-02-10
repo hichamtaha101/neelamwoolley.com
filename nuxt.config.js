@@ -3,7 +3,8 @@ const postcss = require( './postcss.webpack.config' );
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Neelam Woolley | UI/UX Designer',
+    title: 'UI/UX Designer',
+	titleTemplate: 'Neelam Woolley | %s',
     htmlAttrs: {
       lang: 'en'
     },

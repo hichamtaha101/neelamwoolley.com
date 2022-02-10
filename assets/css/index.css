@@ -32,11 +32,16 @@ h6,
 	font-weight: bold;
 }
 
-.page {
-	padding-top: 120px;
+p {
+	line-height: 21px;
 }
 
 .nw {
+	&-page {
+		padding-top: var(--header-height);
+		min-height: calc(100vh - 60px);
+		background-color: var(--main-color);
+	}
 	&-content-wrap {
 		background-color: var(--main-color);
 		> div {
@@ -76,9 +81,6 @@ h6,
 	}
 	&-section__content {
 		margin-top: 68px;
-		&__design {
-			background: #282828;
-		}
 		&__illustration {
 			max-width: 536px;
 			background: #282828;

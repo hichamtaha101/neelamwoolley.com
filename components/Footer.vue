@@ -1,5 +1,5 @@
 <template>
-  <div class="footer flex justify-between items-center p-4 z-20 relative">
+  <div class="footer flex justify-between items-center p-4 z-40 relative">
 	<div style="color: #777777">Neelam Woolley 2022</div>
 	<div>
 		<div class="flex gap-4 cursor-pointer">
@@ -22,5 +22,6 @@
 	padding-left: 140px;
 	padding-right: 140px;
 	background-color: #282828;
+	min-height: 60px;
 }
 </style>

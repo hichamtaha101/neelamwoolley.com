@@ -1,10 +1,8 @@
 <template>
   <v-app>
-	<div class="portfolio">
-		<app-header />
-			<Nuxt />
-		<app-footer />
-	</div>
+	<app-header />
+		<Nuxt />
+	<app-footer />
   </v-app>
 </template>
 
@@ -16,6 +14,3 @@ export default {
 	components: { AppFooter, AppHeader }
 }
 </script>
-
-<style lang="postcss">
-</style>
