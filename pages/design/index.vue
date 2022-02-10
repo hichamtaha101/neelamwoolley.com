@@ -21,7 +21,7 @@
 							<span class="relative" style="bottom: 2px;">View Project</span>
 						</div>
 					</div>
-					<!-- <div>Image</div> -->
+					<img v-if="d.boxImage" :src="require(`~/assets/images/design/${d.boxImage}`)" :alt="d.boxImageAlt">
 				</div>
 	  		</div>
 		</div>
@@ -30,87 +30,11 @@
 <script>
 import SectionTitle from '~/components/SectionTitle.vue';
 import Banner from '~/components/Banner.vue';
+import { mapGetters } from 'vuex';
 
 export default {
 	components: { SectionTitle, Banner },
-	data() {
-		return {
-			designs: [
-				{ 
-					sectionTitle: 'Website',
-					sectionSubTitle: 'Quickmint',
-					boxTitle: 'QUCIK MINT | NFT | WEBSITE',
-					boxTag: 'UI/UX Design | Graphic Design | E-Commerce',
-					boxDescription: 'UI/UX website design for the Quickmint NFT e-commerce website. Plus Logo/Branding Design and NFT Illustration series.',
-					boxLink: '/design/quick-mint',
-					boxImage: '',
-				},
-				{ 
-					sectionTitle: 'Web Application',
-					sectionSubTitle: 'HENESYS GROUP',
-					boxTitle: 'HENESYS GROUP | SAAS',
-					boxTag: 'UI/UX Design | Graphic Design | E-Commerce',
-					boxDescription: 'UX/UI Design for the Henesys Group SaaS. Plus Graphic Design for web.',
-					boxLink: '/design/henesys-group',
-					boxImage: '',
-				},
-				{ 
-					sectionTitle: 'Website',
-					sectionSubTitle: 'GLADIATOR BIKES',
-					boxTitle: 'GLADIATOR BIKES | WEBSITE',
-					boxTag: 'UI/UX Design | Graphic Design | E-Commerce',
-					boxDescription: 'UI/UX website design for a Vancouver based bicycle company.. Plus Logo/Branding Design.',
-					boxLink: '/design/gladiator-bikes',
-					boxImage: '',
-				},
-				{ 
-					sectionTitle: 'Website',
-					sectionSubTitle: 'SHAPESHIFTERS',
-					boxTitle: 'SHAPESHIFTERS | WEBSITE',
-					boxTag: 'UI/UX Design | Graphic DesigN',
-					boxDescription: 'UI/UX website design for a Vancouver based Visual FX studio.. Plus Logo/Branding Design.',
-					boxLink: '/design/shape-shifters',
-					boxImage: '',
-				},
-				{ 
-					sectionTitle: 'Website',
-					sectionSubTitle: 'VANCOUVER BITCOIN',
-					boxTitle: 'VANCOUVER BITCOIN | WEBSITE',
-					boxTag: 'UI/UX Design | Graphic Design',
-					boxDescription: 'UI/UX website design for a Vancouver based cryptocurrency brokerage firm. Plus Graphic Design for web.',
-					boxLink: '/design/vancouver-bitcoin',
-					boxImage: '',
-				},
-				{ 
-					sectionTitle: 'Web Application',
-					sectionSubTitle: 'BITTREO',
-					boxTitle: 'BITTREO | BROKERAGE | WEB APPLICATION',
-					boxTag: 'UI/UX Design | Graphic Design',
-					boxDescription: 'UI/UX design for a web based crypto currency brokerage application. Plus Graphic Design for web.',
-					boxLink: '/design/bittreo',
-					boxImage: '',
-				},
-				{ 
-					sectionTitle: 'Website',
-					sectionSubTitle: 'OCIN | ECO SWIMWEAR',
-					boxTitle: 'OCIN | ECO SWIMWEAR | WEBSITE',
-					boxTag: 'UI/UX Design | E-Commerce',
-					boxDescription: 'UI/UX design for an e-commerce website. Front end design for custom Shopify theme.',
-					boxLink: '/design/eco-swimwear',
-					boxImage: '',
-				},
-				{ 
-					sectionTitle: 'Website',
-					sectionSubTitle: 'RODEN GRAY',
-					boxTitle: 'RODEN GRAY | DESIGNER MENSWEAR | WEBSITE',
-					boxTag: 'UI Design | Web Design | E-Commerce',
-					boxDescription: 'UI/UX design for an e-commerce website. Front end design for custom Shopify theme.',
-					boxLink: '/design/roden-gray',
-					boxImage: '',
-				},
-			]
-		}
-	}
+	computed: mapGetters( ['designs'] )
 }
 </script>
 <style lang="postcss">

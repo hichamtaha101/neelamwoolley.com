@@ -71,9 +71,9 @@
 						<div class="nw-project-divider" />
 
 						<div class="flex gap-4 mt-7">
-							<img src="~/assets/images/photoshop-icon.png" alt="Photoshop">
-							<img src="~/assets/images/illustrator-icon.png" alt="Illustrator">
-							<img src="~/assets/images/xd-icon.png" alt="XD">
+							<img src="~/assets/images/common/photoshop-icon.png" alt="Photoshop">
+							<img src="~/assets/images/common/illustrator-icon.png" alt="Illustrator">
+							<img src="~/assets/images/common/xd-icon.png" alt="XD">
 						</div>
 
 						<div class="nw-section-divider-title pb-1 mt-7">OVERVIEW</div>

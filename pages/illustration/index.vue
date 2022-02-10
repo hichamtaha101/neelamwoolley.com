@@ -32,7 +32,7 @@
 					<img class="h-full" :src="require(`~/assets/images/illustration/${vii.image}`)" :alt="vii.alt || 'illustration image'">
 						<div 
 							class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-							<img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
+							<img src="~/assets/images/common/arrow-right-regular-grey.svg" alt="Arrow Right">
 						</div>
 					</div>
 					<div class="nw-section__content__illustration empty relative" v-for="vie in vi.images.length > 3 ? 0 : 3 - vi.images.length " :key="`vie_${vie}`" />
@@ -65,7 +65,7 @@
 					<img class="h-full" :src="require(`~/assets/images/illustration/${rii.image}`)" :alt="rii.alt || 'illustration image'">
 						<div 
 							class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-							<img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
+							<img src="~/assets/images/common/arrow-right-regular-grey.svg" alt="Arrow Right">
 						</div>
 					</div>
 					<div class="nw-section__content__illustration empty relative" v-for="rie in ri.images.length > 3 ? 0 : 3 - ri.images.length " :key="`rie_${rie}`" />

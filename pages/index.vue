@@ -38,7 +38,7 @@
 		<div class="nw-section">
 			<section-title title="Featured" sub-title="Web Designs" button-text="View All Projects" button-icon-class-names="fas fa-mouse mr-2" button-link="/design"/>
 			<div class="nw-section__content grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-7 text-white">
-				<design-card :design="wd" v-for="(wd, index) in webDesigns" :key="index" />
+				<design-card :design="fd" v-for="(fd, index) in featuredDesigns" :key="index" />
 			</div>
 		</div>
 		<div class="nw-section-divider-title pb-1">Scroll To Learn More <i class="fa fa-caret-down ml-1" /></div>
@@ -54,7 +54,7 @@
 					<div 
 						@click="$router.push('/illustration')" 
 						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-						<img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
+						<img src="~/assets/images/common/arrow-right-regular-grey.svg" alt="Arrow Right">
 					</div>
 				</div>
 				<div class="nw-section__content__illustration relative">
@@ -62,7 +62,7 @@
 					<div 
 						@click="$router.push('/illustration')" 
 						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-						<img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
+						<img src="~/assets/images/common/arrow-right-regular-grey.svg" alt="Arrow Right">
 					</div>
 				</div>
 				<div class="nw-section__content__illustration relative">
@@ -70,7 +70,7 @@
 					<div
 						@click="$router.push('/illustration')" 
 						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-						 <img src="~/assets/images/arrow-right-regular-grey.svg" alt="Arrow Right">
+						 <img src="~/assets/images/common/arrow-right-regular-grey.svg" alt="Arrow Right">
 					</div>
 				</div>
 			</div>
@@ -107,46 +107,19 @@
 <script>
 import SectionTitle from '~/components/SectionTitle.vue';
 import DesignCard from '~/components/DesignCard.vue';
+import { mapGetters } from 'vuex';
 
 export default {
 	components: { SectionTitle, DesignCard },
 	data() {
 		return {
 			quote: "I specialize in creating high fidelity prototypes that are development ready.",
-			webDesigns: [
-				{ 
-					title: 'Quick Mint | Website', 
-					tag: 'UI/UX Design | Graphic Design',
-					briefDescription: 'UI/UX website design for the Quickmint NFT e-commerce website.',
-					imgSrc: '~/assets/images/homepage/',
-					imgAlt: 'Quickmint Thumbnail',
-					link: '/design/quick-mint'
-				},
-				{ 
-					title: 'Henesys Group | SAAS', 
-					tag: 'UI/UX Design | Graphic Design',
-					briefDescription: 'UX/UI Design for the Henesys Group SaaS.',
-					imgSrc: '~/assets/images/homepage/',
-					imgAlt: 'Henesys Group Thumbnail',
-					link: '/design/henesys-group'
-				},
-				{ 
-					title: 'Vancouver Bitcoin | Website', 
-					tag: 'UI/UX Design | Graphic Design',
-					briefDescription: 'UI/UX website design for a Vancouver based cryptocurrency brokerage firm.',
-					imgSrc: '~/assets/images/homepage/',
-					imgAlt: 'Vancouver Bitcoin Thumbnail',
-					link: '/design/vancouver-bitcoin'
-				},
-				{ 
-					title: 'Bittreo | Web Application', 
-					tag: 'UI/UX Design | Graphic Design',
-					briefDescription: 'UI/UX design for a web based crypto currency brokerage application.',
-					imgSrc: '~/assets/images/homepage/',
-					imgAlt: 'Bittreo Thumbnail',
-					link: '/design/bittreo'
-				},
-			],
+		}
+	},
+	computed: {
+		...mapGetters( ['designs'] ),
+		featuredDesigns() {
+			return Object.values( this.designs ).filter( d => !!d.featured === true )
 		}
 	},
 	mounted() {
