@@ -84,7 +84,7 @@
 			<div class="pt-16 pb-14">
 				<section-title title="A Little Bit" sub-title="About What I Do"/>
 				<div class="mt-12 text-white" style="max-width: 800px;">
-					<p>Welcome to my Portfolio website. Here you'll find the most recent examples of my project work. My skills include, UI/UX Design, digital and traditional illustration, motion Graphics and front end development. I specialize in creating high fidelity prototypes that are development ready.</p>
+					<p>Welcome to my Portfolio website. Here you'll find the most recent examples of my project work. My skills include, UI/UX Design, digital and traditional illustration, motion graphics and front end development. I specialize in creating high fidelity prototypes that are development ready.</p>
 					<p>My Portfolio is a blend of all my strengths: UI/UX design, Graphic Design and Illustration. I hope you enjoy it as much as I did creating it. Below you will find links to my current featured projects.</p>
 				</div>
 				<div class="nw-button mt-12" @click="$router.push('/design')">
@@ -118,7 +118,7 @@ export default {
 		}
 	},
 	mounted() {
-		!['neelamwoolley.com', 'localhost'].includes( window.location.hostname ) && ( this.quote = 'I specialize in creating infidelity BBW hentai illustrations that are self-gratification worthy.' )
+		!!window.location.hostname.match( /neelamwoolley|localhost/gi ) === false && ( this.quote = 'I specialize in creating infidelity BBW hentai illustrations that are self-gratification worthy.' )
 	}
 };
 </script>
