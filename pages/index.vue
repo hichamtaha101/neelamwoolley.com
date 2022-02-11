@@ -118,7 +118,7 @@ export default {
 		}
 	},
 	mounted() {
-		!!window.location.hostname.match( /neelamwoolley|localhost/gi ) === false && ( this.quote = 'I specialize in creating infidelity BBW hentai illustrations that are self-gratification worthy.' )
+		// !!window.location.hostname.match( /neelamwoolley|localhost/gi ) === false && ( this.quote = 'I specialize in creating infidelity BBW hentai illustrations that are self-gratification worthy.' )
 	}
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
 	<div class="nw-page design">
-		<banner featured-text="Design"/>
+		<banner featured-text="Design" image-path="designs/henesys-banner.png"/>
 
 		<!-- Main Design Section -->
 		<div class="nw-content-wrap z-20 relative">

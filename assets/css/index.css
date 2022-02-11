@@ -37,6 +37,13 @@ p {
 }
 
 .nw {
+	&-wrapper {
+		max-width: var(--nw-max-width);
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: auto;
+	}
 	&-page {
 		padding-top: var(--header-height);
 		min-height: calc(100vh - 60px);
@@ -45,8 +52,11 @@ p {
 	&-content-wrap {
 		background-color: var(--main-color);
 		> div {
-			padding-left: 140px;
-			padding-right: 140px;
+			max-width: var(--nw-max-width);
+			width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin: auto;
 		}
 	}
 	&-button {

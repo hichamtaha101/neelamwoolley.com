@@ -18,4 +18,5 @@
 	--font-3: Tahoma;
 	--font-4: FontAwesome;
 	--header-height: 120px;
+	--nw-max-width: 1610px; /* 1920 - 280 mockup - 30 paddings. */
 }

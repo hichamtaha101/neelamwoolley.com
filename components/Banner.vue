@@ -1,6 +1,9 @@
 <template>
-	<div class="nw-banner relative text-white" :style="imageUrl ? 'background-image: url(/illustration-banner.png)' : '' ">
-		<div class="nw-banner__overlay opacity-60" />
+	<div class="nw-banner relative text-white"> 
+		<img :src="require(`~/assets/images/${imagePath}`)" alt="Banner Image" class="fixed w-full">
+		<img :src="require(`~/assets/images/${imagePath}`)" alt="Banner Image" class="invisible w-full"> <!-- Need this for img dimensions to push parent -->
+		<div class="nw-banner__overlay opacity-60 absolute bottom-0" />
+		<div class="nw-banner__border-bottom w-full absolute bottom-0" />
 		<div class="nw-banner__learn-more absolute bottom-0">Scroll To Learn More <i class="fa fa-caret-down" /></div>
 		<div class="nw-banner__title absolute text-2xl">
 			<div class="flex">
@@ -14,7 +17,7 @@
 export default {
 	props: {
 		featuredText: { type: String, required: true, default: '' },
-		imageUrl: { type: String, required: false, default: '' },
+		imagePath: { type: String, required: false, default: '' },
 	}
 }
 </script>
@@ -28,15 +31,13 @@ export default {
     background: var(--secondary-color-3);
 }
 .nw-banner {
-	height: 675px;
-	border-bottom: 15px solid var(--secondary-color-3);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	&__border-bottom {
+		border-bottom: 15px solid var(--secondary-color-3);
+	}
 	&__overlay {
+		background: transparent linear-gradient(180deg, #000000A6 0%, #000000 100%) 0% 0% no-repeat padding-box;
 		width: 100%;
 		height: 100%;
-		background: transparent linear-gradient(180deg, #000000A6 0%, #000000 100%) 0% 0% no-repeat padding-box;
 	}
 	&__learn-more {
 		padding: 15px;

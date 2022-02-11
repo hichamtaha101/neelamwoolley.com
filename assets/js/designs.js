@@ -13,7 +13,7 @@ module.exports = {
 		boxTag: 'UI/UX Design | Graphic Design | E-Commerce',
 		boxDescription: 'UI/UX website design for the Quickmint NFT e-commerce website. Plus Logo/Branding Design and NFT Illustration series.',
 		boxLink: '/design/quick-mint',
-		boxImage: '',
+		boxImage: 'quick-mint/thumbnail-md.png',
 		boxImageAlt: 'Quick Mint Thumbnail',
 		similarProjects: ['roden-gray', 'henesys-group'],
 

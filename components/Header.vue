@@ -1,23 +1,25 @@
 <template>
-  <div class="header fixed flex justify-between items-center z-40 w-full">
-	  <div class="logo text-2xl uppercase">
-			<NuxtLink to="/">
-			  	Neelam <span class="font-bold">Woolley</span>
-			</NuxtLink>
-		</div>
-	  <div>
-		  <div class="nav-items flex flex-wrap gap-16 uppercase">
-		  	<div :class="`navigation-link cursor-pointer hover:opacity-80 transition-opacity`">
-				<NuxtLink to="/design">
-					Design
-				</NuxtLink>
-			  </div>
-		  	<div :class="`navigation-link cursor-pointer hover:opacity-80 transition-opacity`">
-				<NuxtLink to="/illustration">
-					Illustration
+  <div class="header fixed flex justify-center items-center z-40 w-full">
+	  <div class="nw-wrapper justify-between">
+		<div class="logo text-2xl uppercase">
+				<NuxtLink to="/">
+					Neelam <span class="font-bold">Woolley</span>
 				</NuxtLink>
 			</div>
-		  </div>
+		<div>
+			<div class="nav-items flex flex-wrap gap-16 uppercase">
+				<div :class="`navigation-link cursor-pointer hover:opacity-80 transition-opacity`">
+					<NuxtLink to="/design">
+						Design
+					</NuxtLink>
+				</div>
+				<div :class="`navigation-link cursor-pointer hover:opacity-80 transition-opacity`">
+					<NuxtLink to="/illustration">
+						Illustration
+					</NuxtLink>
+				</div>
+			</div>
+		</div>
 	  </div>
   </div>
 </template>
@@ -33,9 +35,10 @@ export default {
 	height: 122px;
 	background-color: var(--main-color);
 	color: white;
-	padding-left: 140px;
-	padding-right: 140px;
 	box-shadow: 0px 4px 7px #00000026;
+	>div {
+		display: flex;
+	}
 	.nav-items {
 		.nuxt-link-active { position: relative; }
 		.nuxt-link-active::before {

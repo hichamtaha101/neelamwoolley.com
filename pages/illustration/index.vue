@@ -1,6 +1,6 @@
 <template>
 	<div class="nw-page illustration">
-		<banner featured-text="Illustration" image-url="~/assets/images/illustration/dragon-header.png"/>
+		<banner featured-text="Illustration" image-path="illustration/dragon-banner.png"/>
 
 		<!-- Main Illustration Section -->
 		<div class="nw-content-wrap z-20 relative">
@@ -78,64 +78,14 @@
 <script>
 import SectionTitle from '~/components/SectionTitle.vue';
 import Banner from '~/components/Banner.vue';
+import illustrations from '~/assets/js/illustrations';
 
 export default {
 	components: { SectionTitle, Banner },
 	data() {
 		return {
-			vectorIllustrations: [
-				{
-					sectionTitle: 'Vector',
-					sectionSubTitle: 'Crocodiles',
-					images: [
-						{ image: 'crocodile-1.png' },
-						{ image: 'crocodile-2.png' },
-						{ image: 'crocodile-3.png' },
-					]
-				},
-				{
-					sectionTitle: 'Vector',
-					sectionSubTitle: 'Environments',
-					images: [
-						{ image: 'environment-1.png' },
-						{ image: 'environment-2.png' },
-						{ image: 'environment-3.png' },
-					]
-				}
-			],
-			rasterIllustrations: [
-				{
-					sectionTitle: 'Dragon',
-					sectionSubTitle: 'Series',
-					images: [
-						{ image: 'dragon-1.png' },
-						{ image: 'dragon-2.png' },
-					]
-				},
-				{
-					sectionTitle: 'Skull',
-					sectionSubTitle: 'Series',
-					images: [
-						{ image: 'skull-girl-1.png' },
-						{ image: 'skull-girl-2.png' },
-					]
-				},
-				{
-					sectionTitle: 'Line',
-					sectionSubTitle: 'Drawings',
-					images: [
-						{ image: 'line-drawing-1.png' },
-						{ image: 'line-drawing-2.png' },
-					]
-				},
-				{
-					sectionTitle: 'Traditional',
-					sectionSubTitle: 'Line Drawings',
-					images: [
-						{ image: 'traditional-line-drawing-1.png' }
-					]
-				},
-			]
+			vectorIllustrations: illustrations.filter( i => i.type === 'vector' ),
+			rasterIllustrations: illustrations.filter( i => i.type === 'raster' ),
 		}
 	},
 	head() {
