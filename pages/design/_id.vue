@@ -1,6 +1,6 @@
 <template>
 	<div class="nw-page design relative z-30">
-		<div class="nw-project-wrap text-white flex gap-4 relative">
+		<div class="nw-project-wrap text-white flex gap-4 relative m-auto">
 
 			<!-- Main Project Content Section -->
 			<div class="nw-project-content">
@@ -166,7 +166,9 @@ export default {
 			}
 		}
 		&-wrap {
-			padding-left: 140px;
+			padding-left: 15px;
+			padding-right: 15px;
+			max-width: var(--nw-max-width);
 			background-color: var(--main-color);
 		}
 		&-content {
