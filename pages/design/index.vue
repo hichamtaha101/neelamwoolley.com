@@ -17,8 +17,12 @@
 						<div />
 						<div>{{ d.boxDescription }}</div>
 						<div class="nw-button--inverse mt-auto ml-auto" @click="$router.push(d.boxLink)">
-							<i class="fa fa-caret-right mr-4 text-xl" />
-							<span class="relative" style="bottom: 2px;">View Project</span>
+							<div class="flex items-center">
+							<svg class="mr-4" xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14">
+							<path d="M157.252,587v14l12-6.789Z" transform="translate(-157.252 -587)" fill="#2f69bb"/>
+							</svg>
+							<span>View Project</span>
+							</div>
 						</div>
 					</div>
 					<img v-if="d.boxImage" :src="require(`~/assets/images/designs/${d.boxImage}`)" :alt="d.boxImageAlt">
@@ -62,13 +66,13 @@ export default {
 		border-radius: 3px;
 		color: white;
 
-		div:nth-child(1) {
+		>div:nth-child(1) {
 			padding: 4px 15px;
 			background: white;
 			border-radius: 3px;
 			color: var(--secondary-color-3);
 		}
-		div:nth-child(3) {
+		>div:nth-child(3) {
 			@add-mixin dotted-line-styles var(--secondary-color-3), #ffffff;
 			padding-bottom: 15px;
 			margin-top: 15px;

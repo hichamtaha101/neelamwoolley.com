@@ -5,8 +5,13 @@
 		<!-- Main Illustration Section -->
 		<div class="nw-content-wrap z-20 relative">
 			<div class="py-14" style="color: #777777"><i class="fa fa-info-circle mr-1" />Page Is Currently Under Construction and may lack functionality</div>
-			<div class="nw-section-divider-title pb-1">Vector Content Below <i class="fa fa-caret-down ml-1" /></div>
-			<div class="nw-section-divider" />
+			<div class="nw-section-divider-title pb-1 flex items-center">Vector Content Below <svg class="ml-2" style="margin-bottom: 2px;" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
+			<path data-name="Arrow Down" d="M5.5,0,11,9H0Z" transform="translate(11 9) rotate(180)" fill="#777"/>
+			</svg>
+			</div>
+			<div>
+				<div class="nw-section-divider" />
+			</div>
 
 			<!-- Vector -->
 			<div class="nw-section" v-for="(vi, index) in vectorIllustrations" :key="`vi_${index}`">
@@ -25,22 +30,21 @@
 				</section-title>
 
 				<div class="nw-section__content grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
-					<div 
-					class="nw-section__content__illustration relative"
+					<illustration-card
 					v-for="( vii, viii ) in vi.images.slice(0, 3)"
-					:key="`vii_${viii}`">
-					<img class="h-full" :src="require(`~/assets/images/illustration/${vii.image}`)" :alt="vii.alt || 'illustration image'">
-						<div 
-							class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-							<img src="~/assets/images/common/arrow-right-regular-grey.svg" alt="Arrow Right">
-						</div>
-					</div>
+					:illustration="vii"
+					:key="`vii_${viii}`"/>
 					<div class="nw-section__content__illustration empty relative" v-for="vie in vi.images.length > 3 ? 0 : 3 - vi.images.length " :key="`vie_${vie}`" />
 				</div>
 			</div>
 
-			<div class="nw-section-divider-title pb-1">Raster Content Below <i class="fa fa-caret-down ml-1" /></div>
-			<div class="nw-section-divider" />
+			<div class="nw-section-divider-title pb-1 flex items-center">Raster Content Below <svg class="ml-2" style="margin-bottom: 2px;" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
+			<path data-name="Arrow Down" d="M5.5,0,11,9H0Z" transform="translate(11 9) rotate(180)" fill="#777"/>
+			</svg>
+			</div>
+			<div>
+				<div class="nw-section-divider" />
+			</div>
 
 			<!-- Raster -->
 			<div class="nw-section" v-for="(ri, index) in rasterIllustrations" :key="`ri_${index}`">
@@ -58,16 +62,10 @@
 					</template>
 				</section-title>
 				<div class="nw-section__content grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
-					<div
-					class="nw-section__content__illustration relative" 
+					<illustration-card
 					v-for="( rii, riii ) in ri.images.slice(0, 3)" 
-					:key="`ri_${riii}`">
-					<img class="h-full" :src="require(`~/assets/images/illustration/${rii.image}`)" :alt="rii.alt || 'illustration image'">
-						<div 
-							class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-							<img src="~/assets/images/common/arrow-right-regular-grey.svg" alt="Arrow Right">
-						</div>
-					</div>
+					:illustration="rii"
+					:key="`ri_${riii}`" />
 					<div class="nw-section__content__illustration empty relative" v-for="rie in ri.images.length > 3 ? 0 : 3 - ri.images.length " :key="`rie_${rie}`" />
 				</div>
 			</div>

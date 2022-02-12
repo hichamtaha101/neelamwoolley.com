@@ -29,7 +29,10 @@
 				View Illustration Work
 			</div>
 		</div>
-		<div class="hero-section__scroll-text absolute">Scroll To Learn More <i class="fa fa-caret-down pl-1"></i></div>
+		<div class="hero-section__scroll-text absolute flex items-center">Scroll To Learn More <svg style="margin-bottom: 2px" class="ml-2" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
+		<path id="Arrow_Down_Blue" data-name="Arrow Down Blue" d="M5.5,0,11,9H0Z" transform="translate(11 9) rotate(180)" fill="#2f69bb"/>
+		</svg>
+		</div>
 		<img class="img-hero-tes" src="~/assets/images/homepage/tes.png" alt="tes.png">
   	</div>
 	  <div class="nw-content-wrap z-20 relative">
@@ -41,42 +44,26 @@
 				<design-card :design="fd" v-for="(fd, index) in featuredDesigns" :key="index" />
 			</div>
 		</div>
-		<div class="nw-section-divider-title pb-1">Scroll To Learn More <i class="fa fa-caret-down ml-1" /></div>
-		<div class="nw-section-divider" />
+		<div class="nw-section-divider-title pb-1 flex">Scroll To Learn More <img src="~/assets/images/common/arrow-down-grey.svg" class="ml-2" alt="Arrow Down"></div>
+		<div>
+			<div class="nw-section-divider" />
+		</div>
 
 
 		<!-- Featured Illustration Section -->
 		<div class="nw-section">
 			<section-title title="Featured" sub-title="Illustration" button-text="View All Projects" button-icon-class-names="fa fa-pencil mr-2" button-link="/illustration"/>
 			<div class="nw-section__content grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
-				<div class="nw-section__content__illustration relative">
-					<img class="h-full" :src="require(`~/assets/images/illustration/skull-girl-1.png`)" :alt="'illustration image'">
-					<div 
-						@click="$router.push('/illustration')" 
-						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-						<img src="~/assets/images/common/arrow-right-regular-grey.svg" alt="Arrow Right">
-					</div>
-				</div>
-				<div class="nw-section__content__illustration relative">
-					<img class="h-full" :src="require(`~/assets/images/illustration/dragon-1.png`)" :alt="'illustration image'">
-					<div 
-						@click="$router.push('/illustration')" 
-						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-						<img src="~/assets/images/common/arrow-right-regular-grey.svg" alt="Arrow Right">
-					</div>
-				</div>
-				<div class="nw-section__content__illustration relative">
-					<img class="h-full" :src="require(`~/assets/images/illustration/line-drawing-2.png`)" :alt="'illustration image'">
-					<div
-						@click="$router.push('/illustration')" 
-						class="absolute bottom-0 right-0 p-3 pl-2 cursor-pointer">
-						 <img src="~/assets/images/common/arrow-right-regular-grey.svg" alt="Arrow Right">
-					</div>
-				</div>
+				<illustration-card
+					v-for="( il, ilIndex ) in featuredIllustrations.slice(0, 3)"
+					:illustration="il"
+					:key="`il${ilIndex}`"/>
 			</div>
 	  	</div>
-		<div class="nw-section-divider-title pb-1">Scroll To Learn More <i class="fa fa-caret-down ml-1" /></div>
-		<div class="nw-section-divider" />
+		<div class="nw-section-divider-title pb-1 flex">Scroll To Learn More <img src="~/assets/images/common/arrow-down-grey.svg" class="ml-2" alt="Arrow Down"></div>
+		<div>
+			<div class="nw-section-divider" />
+		</div>
 	
 		<!-- About Myself Section -->
 		<div class="flex pt-20">
@@ -115,10 +102,12 @@ export default {
 		return {
 			quote: "I specialize in creating high fidelity prototypes that are development ready.",
 			featuredDesigns: Object.values( designs ).filter( d => !!d.featured === true ),
+			featuredIllustrations: [
+				{ image: 'skull-girl-1.png' },
+				{ image: 'dragon-1.png' },
+				{ image: 'line-drawing-2.png' },
+			]
 		}
-	},
-	mounted() {
-		// !!window.location.hostname.match( /neelamwoolley|localhost/gi ) === false && ( this.quote = 'I specialize in creating infidelity BBW hentai illustrations that are self-gratification worthy.' )
 	}
 };
 </script>

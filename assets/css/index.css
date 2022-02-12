@@ -83,8 +83,6 @@ p {
 	}
 	&-section-divider {
 		@add-mixin dotted-line-styles var(--main-color);
-		margin-left: 140px;
-		margin-right: 140px;
 	}
 	&-section-divider-title {
 		color: #777777;

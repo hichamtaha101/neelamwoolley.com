@@ -58,8 +58,9 @@ export default {
 				]
 			},
 			graphicImages: [
-				{ imagePath: 'shape-shifters/desktop/crystal-logo-sl.png', label: 'Logo Short List'},
-				{ imagePath: 'shape-shifters/desktop/cube-logo-sl.png', label: 'Logo Final'},
+				{ imagePath: 'quick-mint/desktop/logo-sl.png', label: 'Logo Short List'},
+				{ imagePath: 'quick-mint/desktop/logo-final.png', label: 'Logo Final'},
+				{ imagePath: 'quick-mint/desktop/emblem-final.png', label: 'Emblem Final'},
 			],
 			seriesGraphicImages: [
 				{ imagePath: 'quick-mint/desktop/december-2021.png', label: 'December 2021'},

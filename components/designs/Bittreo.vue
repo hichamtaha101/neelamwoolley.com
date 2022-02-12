@@ -28,8 +28,8 @@
 export default {
 	props: { 
 		design: { 
-			type: Object, 
-			required: true, 
+			type: Object,
+			required: true,
 			default: () => ( {} ),
 		},
 	},

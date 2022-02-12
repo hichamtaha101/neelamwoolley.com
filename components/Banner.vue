@@ -4,7 +4,10 @@
 		<img :src="require(`~/assets/images/${imagePath}`)" alt="Banner Image" class="invisible w-full"> <!-- Need this for img dimensions to push parent -->
 		<div class="nw-banner__overlay opacity-60 absolute bottom-0" />
 		<div class="nw-banner__border-bottom w-full absolute bottom-0" />
-		<div class="nw-banner__learn-more absolute bottom-0">Scroll To Learn More <i class="fa fa-caret-down" /></div>
+		<div class="nw-banner__learn-more absolute bottom-0 flex items-center">Scroll To Learn More <svg style="margin-bottom: 2px" class="ml-2" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
+		<path id="Polygon_2" data-name="Polygon 2" d="M5.5,0,11,9H0Z" transform="translate(11 9) rotate(180)" fill="#fff"/>
+		</svg>
+		</div>
 		<div class="nw-banner__title absolute text-2xl">
 			<div class="flex">
 				<div class="parallelogram-right"></div>

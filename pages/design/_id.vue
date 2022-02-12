@@ -5,9 +5,10 @@
 			<!-- Main Project Content Section -->
 			<div class="nw-project-content">
 				<div class="flex items-center pt-12 cursor-pointer hover:opacity-90 transition-opacity" @click="$router.push('/design')">
-					<svg class="mr-4 rotate-90" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
-						<path id="Polygon_2" data-name="Polygon 2" d="M5.5,0,11,9H0Z" transform="translate(11 9) rotate(180)" fill="#fff"/>
+					<svg class="mr-4" xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14">
+						<path id="Path_35" data-name="Path 35" d="M169.252,587v14l-12-6.789Z" transform="translate(-157.252 -587)" fill="#fff"/>
 					</svg>
+
 					Back To Projects
 				</div>
 				<component :is="design.component" :design="design" />
