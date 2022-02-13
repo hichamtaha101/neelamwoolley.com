@@ -1,6 +1,6 @@
 <template>
-  <div class="footer flex justify-center items-center z-40 w-full">
-	<div class="nw-wrapper justify-between">
+  <div class="footer flex justify-center items-center z-40 w-full relative">
+	<div class="nw-wrapper justify-center py-4 lg:py-0 lg:justify-between flex-col lg:flex-row gap-2 lg:gap-0 items-center">
 		<div style="color: #777777">Neelam Woolley 2022</div>
 		<div>
 			<div class="flex gap-4 cursor-pointer">

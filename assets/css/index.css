@@ -66,7 +66,6 @@ p {
 		&:hover {
 			background-color: #285da7;
 		}
-
 		&--inverse {
 			@add-mixin nw-button-styles;
 			color: var(--secondary-color-3);
@@ -76,10 +75,13 @@ p {
 			}
 		}
 	}
-
 	&-section {
 		padding-top: 78px;
 		padding-bottom: 78px;
+		@media (--md) {
+			padding-top: 34px;
+			padding-bottom: 34px;
+		}
 	}
 	&-section-divider {
 		@add-mixin dotted-line-styles var(--main-color);
@@ -87,30 +89,17 @@ p {
 	&-section-divider-title {
 		color: #777777;
 	}
+	&-section__title {
+		flex-direction: row;
+		@media (--md) {
+			flex-direction: column;
+		}
+	}
 	&-section__content {
 		margin-top: 68px;
-		&__illustration {
-			max-width: 536px;
-			background: #282828;
-			background-position: center;
-			div {
-				background-color: #f4f4f4;
-				&::before {
-					content: "";
-					width: 0;
-					position: absolute;
-					height: 100%;
-					bottom: 0px;
-					left: -20px;
-					border-bottom: 48px solid #f4f4f4;
-					border-left: 20px solid transparent;
-				}
-			}
-			&.empty {
-				background-image: url("~assets/images/illustration/empty-illustration.png");
-				background-size: cover;
-				background-position: center center;
-			}
+		@media (--md) {
+			justify-content: center;
+			margin-top: 34px;
 		}
 	}
 }

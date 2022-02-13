@@ -4,7 +4,7 @@
 		<div class="mt-6">
 			<p>I was tasked with creating a prototype for the re-branded Shapshifters studio portfolio website. Below are some select screenshots from the prototype. Unfortunately im unable to share the full prototype at this time due to the sensitive nature of client work. But you can check out the fully developed site at <a class="underline" href="http://shapeshifterscreative.com/" target="_blank">shapeshifterscreative.com</a>.</p>
 		</div>
-		<div class="flex gap-3">
+		<div class="flex gap-3 mt-6">
 			<div @click="activeView = 'desktop'" :class="`nw-switch py-1 px-3 cursor-pointer text-sm ${activeView === 'desktop' ? 'active' : ''}`">Desktop Samples</div>
 			<div @click="activeView = 'mobile'" :class="`nw-switch py-1 px-3 cursor-pointer text-sm ${activeView === 'mobile' ? 'active' : ''}`">Mobile Samples</div>
 		</div>
@@ -18,7 +18,7 @@
 			<p>Here you can see the shortlist of sample logos we went through before we landed on a solution that worked for the company. All assets were mocked up using Adobe Photoshop and finalized in Adobe Illustrator.</p>
 			<p>Overall they wanted something that would be visually scalable and easy to animate in a 3d space.</p>
 		</div>
-		<div class="grid grid-cols-2 gap-6 mt-2">
+		<div class="grid grid-cols-2 gap-6 mt-6">
 			<design-image v-for="(i, index) in graphicImages" :key="`gi_${index}`" :image="i" />
 		</div>
 	</div>

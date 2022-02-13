@@ -3,16 +3,19 @@
 		<img :src="require(`~/assets/images/${imagePath}`)" alt="Banner Image" class="fixed w-full">
 		<img :src="require(`~/assets/images/${imagePath}`)" alt="Banner Image" class="invisible w-full"> <!-- Need this for img dimensions to push parent -->
 		<div class="nw-banner__overlay opacity-60 absolute bottom-0" />
-		<div class="nw-banner__border-bottom w-full absolute bottom-0" />
-		<div class="nw-banner__learn-more absolute bottom-0 flex items-center">Scroll To Learn More <svg style="margin-bottom: 2px" class="ml-2" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
+		<div class="nw-banner__border-bottom w-full absolute bottom-0 hidden lg:block" />
+		<div class="nw-banner__learn-more absolute bottom-0 items-center hidden lg:flex">Scroll To Learn More <svg style="margin-bottom: 2px" class="ml-2" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
 		<path id="Polygon_2" data-name="Polygon 2" d="M5.5,0,11,9H0Z" transform="translate(11 9) rotate(180)" fill="#fff"/>
 		</svg>
 		</div>
-		<div class="nw-banner__title absolute text-2xl">
+		<div class="nw-banner__title absolute text-2xl hidden lg:block">
 			<div class="flex">
 				<div class="parallelogram-right"></div>
 				<div><i class="fa fa-pencil opacity-50 mr-2"></i>Featured <b>{{ featuredText }}</b></div>
 			</div>
+		</div>
+		<div class="nw-banner__title--mobile absolute text-lg block lg:hidden text-center p-1 w-full">
+			Featured <b>{{ featuredText }}</b>
 		</div>
 	</div>
 </template>
@@ -61,9 +64,6 @@ export default {
 		bottom: 0px;
 		right: 0px;
 		div {
-			div:nth-child(1) {
-
-			}
 			div:nth-child(2) {
 				padding: 15px;
 				padding-right: 185px;
@@ -80,6 +80,10 @@ export default {
 					border-left: 29px solid transparent;
 				}
 			}
+		}
+		&--mobile {
+			bottom: 0px;
+			background-color: var(--secondary-color-3);
 		}
 	}
 }

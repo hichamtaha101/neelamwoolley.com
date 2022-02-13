@@ -5,8 +5,7 @@
 	<div class="hero-section-overlay absolute flex z-10 top-0 right-0">
 		<img class="img-hero-path-13" src="~/assets/images/homepage/Path 13.svg" alt="Path 13">
 		<img src="~/assets/images/homepage/Hero Shape 2.svg" alt="Hero Shape 2">
-
-		<div class="absolute pl-24 h-full w-full flex justify-center items-center text-white text-lg">
+		<div class="absolute pl-24 h-full w-full flex justify-center items-center text-white text-lg z-10">
 			<div style="max-width: 535px">
 				<i class="fa fa-quote-left" /><br/>
 				{{ quote }}
@@ -14,37 +13,41 @@
 		</div>
 	</div>
 	<div class="hero-section text-white font-light relative">
-		<div class="text-4xl pt-24 uppercase">Neelam Woolley</div>
-		<div class="flex mt-4 relative hero-section__title">
-			<div class="hero-section__title text-2xl flex items-center">Web Designer and Illustrator</div>
-			<img class="img-hero-path-11" src="~/assets/images/homepage/Path 11.svg" alt="Path 11">
-		</div>
-		<div class="hero-section__dot-matrix flex items-center gap-8">
-			<div class="nw-button" @click="$router.push('/design')">
-				<i class="fa fa-square mr-5" />
-				View Design Work
+		<div class="nw-wrapper relative z-10" style="min-height: 661px">
+			<div class="pt-12 xs:pt-24 uppercase hero-section__title">Neelam <span class="font-bold xs:font-normal">Woolley</span></div>
+			<div class="text-xl xs:text-2xl flex mt-4 items-center hero-section__sub-title">
+				<div class="flex items-center"><span>Web Designer and Illustrator</span></div>
+				<img class="relative" src="~/assets/images/homepage/Path 11.svg" alt="Path 11">
 			</div>
-			<div class="nw-button" @click="$router.push('/illustration')">
-				<i class="fa fa-square mr-5" />
-				View Illustration Work
+			<div class="flex flex-wrap items-center mt-24 xs:mt-40 gap-8">
+				<div class="nw-button" @click="$router.push('/design')">
+					<i class="fa fa-square mr-5" />
+					View Design Work
+				</div>
+				<div class="nw-button" @click="$router.push('/illustration')">
+					<i class="fa fa-square mr-5" />
+					View Illustration Work
+				</div>
 			</div>
+			<div class="hero-section__scroll-text absolute flex items-center">Scroll To Learn More <svg style="margin-bottom: 2px" class="ml-2" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
+			<path id="Arrow_Down_Blue" data-name="Arrow Down Blue" d="M5.5,0,11,9H0Z" transform="translate(11 9) rotate(180)" fill="#2f69bb"/>
+			</svg>
+			</div>
+			<img class="absolute right-4 z-10 bottom-4 hidden md:block" src="~/assets/images/homepage/tes.png" alt="tes.png">
 		</div>
-		<div class="hero-section__scroll-text absolute flex items-center">Scroll To Learn More <svg style="margin-bottom: 2px" class="ml-2" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
-		<path id="Arrow_Down_Blue" data-name="Arrow Down Blue" d="M5.5,0,11,9H0Z" transform="translate(11 9) rotate(180)" fill="#2f69bb"/>
-		</svg>
-		</div>
-		<img class="img-hero-tes" src="~/assets/images/homepage/tes.png" alt="tes.png">
+		<div class="hero-section__sub-title--extended absolute" />
+		<div class="hero-section__dot-matrix absolute" />
   	</div>
 	  <div class="nw-content-wrap z-20 relative">
 
 		<!-- Featured Design Section -->
 		<div class="nw-section">
 			<section-title title="Featured" sub-title="Web Designs" button-text="View All Projects" button-icon-class-names="fas fa-mouse mr-2" button-link="/design"/>
-			<div class="nw-section__content grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-1 gap-7 text-white">
+			<div class="nw-section__content flex flex-wrap gap-4 text-white">
 				<design-card :design="fd" v-for="(fd, index) in featuredDesigns" :key="index" />
 			</div>
 		</div>
-		<div class="nw-section-divider-title pb-1 flex">Scroll To Learn More <img src="~/assets/images/common/arrow-down-grey.svg" class="ml-2" alt="Arrow Down"></div>
+		<div class="nw-section-divider-title pb-1 flex justify-center md:justify-start">Scroll To Learn More <img src="~/assets/images/common/arrow-down-grey.svg" class="ml-2" alt="Arrow Down"></div>
 		<div>
 			<div class="nw-section-divider" />
 		</div>
@@ -53,34 +56,35 @@
 		<!-- Featured Illustration Section -->
 		<div class="nw-section">
 			<section-title title="Featured" sub-title="Illustration" button-text="View All Projects" button-icon-class-names="fa fa-pencil mr-2" button-link="/illustration"/>
-			<div class="nw-section__content grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
+			<div class="nw-section__content flex flex-wrap gap-4">
 				<illustration-card
 					v-for="( il, ilIndex ) in featuredIllustrations.slice(0, 3)"
 					:illustration="il"
 					:key="`il${ilIndex}`"/>
 			</div>
 	  	</div>
-		<div class="nw-section-divider-title pb-1 flex">Scroll To Learn More <img src="~/assets/images/common/arrow-down-grey.svg" class="ml-2" alt="Arrow Down"></div>
+		<div class="nw-section-divider-title pb-1 flex justify-center md:justify-start">Scroll To Learn More <img src="~/assets/images/common/arrow-down-grey.svg" class="ml-2" alt="Arrow Down"></div>
 		<div>
 			<div class="nw-section-divider" />
 		</div>
 	
 		<!-- About Myself Section -->
-		<div class="flex pt-20">
+		<div class="flex pt-0 md:pt-20">
 			<!-- Left Side -->
-			<div class="pt-16 pb-14">
+			<div class="pt-16 pb-14 m-auto">
 				<section-title title="A Little Bit" sub-title="About What I Do"/>
-				<div class="mt-12 text-white" style="max-width: 800px;">
+				<div class="mt-12 mb-4 text-white" style="max-width: 800px;">
 					<p>Welcome to my Portfolio website. Here you'll find the most recent examples of my project work. My skills include, UI/UX Design, digital and traditional illustration, motion graphics and front end development. I specialize in creating high fidelity prototypes that are development ready.</p>
 					<p>My Portfolio is a blend of all my strengths: UI/UX design, Graphic Design and Illustration. I hope you enjoy it as much as I did creating it. Below you will find links to my current featured projects.</p>
 				</div>
-				<div class="nw-button mt-12" @click="$router.push('/design')">
+				<div class="nw-button m-auto md:mx-0 mt-12" @click="$router.push('/design')">
 						<i class="fa fa-square mr-5" />
 						View Design Work
 				</div>
 			</div>
 			<!-- Right Side -->
-			<div class="nw-section-rectangles flex ml-auto justify-end">
+			<div class="nw-section-rectangles--extended hidden md:block absolute right-0"/>
+			<div class="nw-section-rectangles pl-4 ml-auto justify-end hidden md:flex">
 				<div></div>
 				<div></div>
 				<div></div>
@@ -111,60 +115,62 @@ export default {
 	}
 };
 </script>
-
-
-
 <style lang="postcss">
-@define-mixin hero-section-position {
-	left: -140px;
-	padding-left: 140px;
-	position: relative;
-	z-index: 10;
-}
-
 .img {
 	&-hero-path-13 {
 		right: 625px;
 		position: absolute;
 		top: 0;
 	}
-	&-hero-path-11{
-		position: relative;
-		left: 35px;
-	}
-	&-hero-tes {
-		position: absolute;
-		right: 170px;
-		bottom: 5px;
-		z-index: 10;
-	}
 }
 
 .hero-section {
-	padding-left: 140px;
-	padding-right: 140px;
 	border-bottom: 15px solid var(--secondary-color-3);
 	min-height: 676px;
 	background: transparent linear-gradient(270deg, var(--secondary-color-1) 0%, var(--secondary-color-2) 32%, var(--secondary-color-2) 58%, var(--secondary-color-1) 100%) 0% 0% no-repeat padding-box;
 	&__title {
-		height: 59px;
-		max-width: 710px;
-		background: url(~/assets/images/homepage/Path 10.svg);
-		background-size: cover;
-		color: #333333;
-		@add-mixin hero-section-position;
+		font-size: 42px;
+		@media (--xs) {
+			font-size: 32px;
+		}
+	}
+	&__sub-title {
+		>div:first-child {
+			color: #333333;
+			height: 59px;
+			background-color: white;
+			max-width: 550px;
+    		transform: skew(-24deg);
+			span {
+				transform: skew(24deg); /* un-skew text. */
+			}
+		}
+		&--extended {
+			top: 175px;
+			height: 59px;
+			width: 25%;
+			background: white;
+			@media (--xs) {
+				top: 112px;
+			}
+		}
 	}
 	&__dot-matrix {
-		margin-top: 80px;
-		height: 239px;
-		max-width: 790px;
 		background: url(~/assets/images/homepage/Dot Matrix.svg);
+		top: 310px;
+		width: 100%;
+		height: 229px;
+		max-width: 790px;
 		background-size: cover;
-		@add-mixin hero-section-position;
 	}
 	&__scroll-text {
 		color: var(--secondary-color-3);
 		bottom: 0px;
+	}
+	&-overlay {
+		@media (max-width: 1520px) {
+			display: none;
+		}
 	}
 }
 
@@ -172,6 +178,11 @@ export default {
 	.nw {
 		&-content-wrap > div:last-child { padding-right: 0px; }
 		&-section-rectangles {
+			&--extended {
+				width: 25%;
+				height: 436px;
+				background-color: #3d73c0;
+			}
 			>div:nth-child(1) { 
 				width: 20px;
 				background-color: var(--secondary-color-3);

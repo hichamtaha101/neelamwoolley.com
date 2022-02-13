@@ -1,13 +1,16 @@
 <template>
-  <div class="header fixed flex justify-center items-center z-40 w-full">
-	  <div class="nw-wrapper justify-between">
+  <div class="header fixed z-40 w-full">
+	  <div class="nw-wrapper h-full justify-center md:justify-between flex-col md:flex-row items-center gap-2 md:gap-0">
 		<div class="logo text-2xl uppercase">
 				<NuxtLink to="/">
-					Neelam <span class="font-bold">Woolley</span>
+				<div class="flex gap-2">
+					<img style="max-width:28px;" src="~/assets/images/homepage/heading shapes.svg"> 
+					<div>Neelam <span class="font-bold">Woolley</span></div>
+				</div>
 				</NuxtLink>
 			</div>
 		<div>
-			<div class="nav-items flex flex-wrap gap-16 uppercase">
+			<div class="nav-items flex flex-wrap gap-4 md:gap-16 uppercase">
 				<div :class="`navigation-link cursor-pointer hover:opacity-80 transition-opacity`">
 					<NuxtLink to="/design">
 						Design

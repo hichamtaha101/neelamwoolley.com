@@ -6,7 +6,7 @@
 			<p>Below are some screenshots of some select pages from the prototype. Unfortunately I'm unable to share the full prototype at this time due to the sensitive nature of client work. But you can check out the fully developed site at <a href="https://vancouverbitcoin.com" target="_blank" class="underline pointer-cursor">vancouverbitcoin.com</a></p>
 		</div>
 
-		<div class="flex flex-col gap-6 mt-2">
+		<div class="flex flex-col gap-6 mt-6">
 			<design-image v-for="(i, index) in desktopImages" :key="index" :image="i" />
 		</div>
 
@@ -16,7 +16,7 @@
 			<p>All assets were mocked up using Adobe Photoshop and finalized in Adobe Illustrator.</p>
 		</div>
 
-		<div class="flex flex-col gap-6 mt-2">
+		<div class="flex flex-col gap-6 mt-6">
 			<design-image v-for="(i, index) in graphicImages" :key="`gi_${index}`" :image="i" />
 		</div>
 	</div>

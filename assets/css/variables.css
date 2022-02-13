@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;700&display=swap");
+
 :root {
 	/* darker grey; */
 	--main-color: #3c3642;
@@ -12,7 +14,7 @@
 	/* almost white */
 	--secondary-color-5: #ffffff12;
 	--font-header: "Exo";
-	--font-0: "Nunito Sans";
+	--font-0: "Exo";
 	--font-1: "sans-serif";
 	--font-2: Verdana;
 	--font-3: Tahoma;

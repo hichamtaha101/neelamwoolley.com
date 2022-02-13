@@ -13,7 +13,7 @@
 				</div>
 				<component :is="design.component" :design="design" />
 				<div class="pt-20 text-2xl"><h2>Similar Projects</h2></div>
-				<div class="py-12 gap-6 flex flex-wrap">
+				<div class="py-12 gap-4 flex flex-wrap">
 					<design-card :design="sp" v-for="(sp, spi) in similarProjects" :key="spi"/>
 				</div>
 			</div>

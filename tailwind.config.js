@@ -1,23 +1,14 @@
 module.exports = {
-	// // Removes any unused tailwind styling
-	// purge: {
-	// 	enabled: process.env.NODE_ENV === 'production',
-	// 	content: [
-	// 		'components/**/*.{vue,js}',
-	// 		'layouts/**/*.vue',
-	// 		'pages/**/*.vue',
-	// 		'plugins/**/*.{js,ts}',
-	// 		'nuxt.config.{js,ts}',
-	// 	],
-	// 	options: { safelist: [/^:|.fa/] },
-	// },
-	// theme: {
-	// 	extend: {
-	// 		colors: {
-	// 			primary: '#004aff',
-	// 			mint: '#c9ffc9',
-	// 			error: '#da5268',
-	// 		},
-	// 	},
-	// },
+	theme: {
+		extend: {
+			screens: {
+				xxs: '480px',
+				xs: '768px',
+				sm: '992px',
+				md: '1200px',
+				lg: '1440px',
+				xl: '1920px',
+			},
+		},
+	},
 };

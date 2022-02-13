@@ -6,7 +6,7 @@
 			<p>Below are some screenshots of some select pages from the prototype. Unfortunately I'm unable to share the full prototype at this time due to the sensitive nature of client work. But you can check out the fully developed site at <a class="underline" href="https://ocin.co" target="_blank">OCIN.co</a>.</p>
 		</div>
 
-		<div class="flex flex-col gap-6 mt-2">
+		<div class="flex flex-col gap-6 mt-6">
 			<design-image v-for="(i, index) in desktopImages" :key="index" :image="i" />
 		</div>
 	</div>

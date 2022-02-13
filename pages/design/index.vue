@@ -3,19 +3,19 @@
 		<banner featured-text="Design" image-path="designs/henesys-banner.png"/>
 
 		<!-- Main Design Section -->
-		<div class="nw-content-wrap z-20 relative">
+		<div class="nw-content-wrap z-20 relative ">
 			<div class="nw-section" v-for="(d, index) in designs" :key="index">
 				<section-title :title="d.sectionTitle" :sub-title="d.sectionSubTitle" >
 					<template #appendRight>
-						<img width="69px" height="69px" src="~/assets/images/designs/Dot Block grey.svg" alt="Dot Block Grey">
+						<img class="hidden md:block" width="69px" height="69px" src="~/assets/images/designs/Dot Block grey.svg" alt="Dot Block Grey">
 					</template>
 				</section-title>
-				<div class="p-4 mt-12 nw-section__design flex justify-between gap-4">
+				<div class="py-4 pr-4 mt-12 nw-section__design flex justify-between gap-4">
 					<div class="nw-section__design__content flex flex-col">
 						<div>{{ d.boxTitle }}</div>
 						<div class="pt-9"><i class="fa fa-tag mr-1" />{{ d.boxTag }}</div>
 						<div />
-						<div>{{ d.boxDescription }}</div>
+						<div class="pb-4">{{ d.boxDescription }}</div>
 						<div class="nw-button--inverse mt-auto ml-auto" @click="$router.push(d.boxLink)">
 							<div class="flex items-center">
 							<svg class="mr-4" xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14">
@@ -25,7 +25,7 @@
 							</div>
 						</div>
 					</div>
-					<img v-if="d.boxImage" :src="require(`~/assets/images/designs/${d.boxImage}`)" :alt="d.boxImageAlt">
+					<img v-if="d.boxImage" class="w-full" style="max-width: 793px" :src="require(`~/assets/images/designs/${d.boxImage}`)" :alt="d.boxImageAlt">
 				</div>
 	  		</div>
 		</div>
@@ -54,12 +54,22 @@ export default {
 </script>
 <style lang="postcss">
 .nw-section__design {
-	height: 481px;
+	min-height: 481px;
+	height: fit-content;
 	background: transparent url('~/assets/images/designs/Design Background.svg') 100% 0% no-repeat padding-box;
+	flex-direction: row;
+	padding: 15px 15px 15px 0px;
+	@media (--md) {
+		background: none;
+		flex-direction: column;
+		padding: 0px;
+		align-items: center;
+	}
 	&__content {
 		max-width: 673px;
 		width: 100%;
-		height: 287px;
+		min-height: 287px;
+    	height: fit-content;
 		padding: 18px;
 		background-color: var(--secondary-color-3);
 		box-shadow: 0px 4px 7px #00000040;

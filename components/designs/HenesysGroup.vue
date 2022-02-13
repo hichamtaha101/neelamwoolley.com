@@ -5,7 +5,7 @@
 			<p>Lead Designer for Henesys Group's SaaS, I can't get too detailed about the product, but essentially it's a web-based platform for businesses looking to manage large-scale inventories, track sales and customers, and manage shipping solutions. My roles include UI/UX and Graphic Design.</p>
 			<p>I was initially brought into the project at a stage where a lot of the work had already been developed without a designer and needed UX/UI refactoring. Again i can't say much about product features specifically but below are some screenshots of some select pages from the prototype.</p>
 		</div>
-		<div class="flex flex-col gap-6 mt-2">
+		<div class="flex flex-col gap-6 mt-6">
 			<design-image v-for="(i, index) in desktopImages" :key="index" :image="i" />
 		</div>
 		<div class="mt-6">
@@ -18,7 +18,7 @@
 			<p>The project had several pages that needed graphic design elements to bring them to life. Using the established brand colours, I created a set of consistently designed vector illustrations.</p>
 			<p>All assets were mocked up using Adobe Photoshop and finalized in Adobe Illustrator.</p>
 		</div>
-		<div class="flex flex-col gap-6 mt-2">
+		<div class="flex flex-col gap-6 mt-6">
 			<design-image v-for="(i, index) in graphicImages" :key="`gi_${index}`" :image="i" :label-min-width="0" />
 		</div>
 
@@ -28,7 +28,7 @@
 			<p>Overall they wanted something simple and recognizable that would be legible at all sizes. This is why they ended up going with lettermark.</p>
 		</div>
 
-		<div class="grid grid-cols-2 gap-6 mt-2">
+		<div class="grid grid-cols-2 gap-6 mt-6">
 			<design-image v-for="(i, index) in logoGraphicImages" :key="`lgi_${index}`" :image="i" />
 		</div>
 	</div>
