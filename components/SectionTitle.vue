@@ -1,5 +1,5 @@
 <template>
-	<div :class="`nw-section__title text-white uppercase flex gap-4 justify-between items-center ${classNames}`">
+	<div :class="`nw-section__title text-white uppercase flex gap-4 justify-between ${classNames}`">
 		<div class="flex">
 			<img src="~/assets/images/homepage/heading shapes.svg" alt="heading shape">
 			<div class="pl-1">

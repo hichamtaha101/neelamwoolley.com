@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="pt-20 text-2xl"><h2>UX/UI</h2></div>
+		<div class="text-2xl"><h2>UX/UI</h2></div>
 		<div class="mt-6">
 			<p>Lead Designer for Henesys Group's SaaS, I can't get too detailed about the product, but essentially it's a web-based platform for businesses looking to manage large-scale inventories, track sales and customers, and manage shipping solutions. My roles include UI/UX and Graphic Design.</p>
 			<p>I was initially brought into the project at a stage where a lot of the work had already been developed without a designer and needed UX/UI refactoring. Again i can't say much about product features specifically but below are some screenshots of some select pages from the prototype.</p>

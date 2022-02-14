@@ -1,14 +1,62 @@
 <template>
 	<div class="nw-page design relative z-30">
-		<div class="nw-project-wrap text-white flex gap-4 relative m-auto">
+		<!-- Fixed Sidebar Section -->
+		<div class="nw-project-sidebar block md:fixed right-0 z-30 text-white">
+			<div class="p-0 md:pl-3 md:pb-3">
+				<div class="h-full px-3 py-12 md:p-11">
+					<section-title :title="design.sectionTitle" :subTitle="design.sectionSubTitle"/>
+					
+					<div class="nw-section-divider-title pb-1 mt-12">PROTOTYPE URL</div>
+					<div class="nw-project-divider" />
+
+					<div class="nw-project-nda-locked w-full bg-black mt-7 py-2 px-8 relative">
+						<i class="fa fa-lock text-black absolute top-0 left-1 z-20 text-xs"></i>
+						NDA Locked
+					</div>
+
+					<div class="nw-section-divider-title pb-1 mt-7">PROTOTYPE DIMENSIONS</div>
+					<div class="nw-project-divider" />
+
+					<div class="flex mt-7">
+						<div class="w-32">Desktop</div>
+						<div><b>{{ design.desktopRes }}</b></div>
+					</div>
+					<div class="flex">
+						<div class="w-32">Mobile</div>
+						<div><b>{{ design.mobileRes }}</b></div>
+					</div>
+
+					<div class="nw-section-divider-title pb-1 mt-7">PROGRAMS</div>
+					<div class="nw-project-divider" />
+
+					<div class="flex gap-4 mt-7">
+						<img :src="require(`~/assets/images/common/${img.file}`)" :alt="img.alt" v-for="( img, imgi ) in design.icons" :key="`img_icon_${imgi}`">
+					</div>
+
+					<div class="nw-section-divider-title pb-1 mt-7">OVERVIEW</div>
+					<div class="nw-project-divider" />
+					<p class="mt-6">{{ design.overview }}</p>
+				</div>
+			</div>
+			<div class="hidden md:flex mt-6 ml-6 gap-4">
+				<img 
+				width="91px" 
+				height="91px" 
+				src="~/assets/images/designs/Dot Block grey.svg" 
+				alt="Dot Block Grey" 
+				v-for="n in 5"
+				:key="n">
+			</div>
+		</div>
+		<div class="nw-project-wrap text-white flex flex-col md:flex-row gap-4 relative m-auto">
+
 
 			<!-- Main Project Content Section -->
 			<div class="nw-project-content">
-				<div class="flex items-center pt-12 cursor-pointer hover:opacity-90 transition-opacity" @click="$router.push('/design')">
+				<div class="flex items-center mb-20 mt-12 cursor-pointer hover:opacity-90 transition-opacity" @click="$router.push('/design')">
 					<svg class="mr-4" xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14">
 						<path id="Path_35" data-name="Path 35" d="M169.252,587v14l-12-6.789Z" transform="translate(-157.252 -587)" fill="#fff"/>
 					</svg>
-
 					Back To Projects
 				</div>
 				<component :is="design.component" :design="design" />
@@ -19,55 +67,8 @@
 			</div>
 
 
-			<!-- Fixed Sidebar Section -->
-			<div class="nw-project-sidebar-block ml-auto"></div>
-			<div class="nw-project-sidebar fixed right-0">
-				<div class="pl-3 pb-3">
-					<div class="h-full py-11 px-12">
-						<section-title :title="design.sectionTitle" :subTitle="design.sectionSubTitle"/>
-						
-						<div class="nw-section-divider-title pb-1 mt-12">PROTOTYPE URL</div>
-						<div class="nw-project-divider" />
-
-						<div class="nw-project-nda-locked w-full bg-black mt-7 py-2 px-8 relative">
-							<i class="fa fa-lock text-black absolute top-0 left-1 z-20 text-xs"></i>
-							NDA Locked
-						</div>
-
-						<div class="nw-section-divider-title pb-1 mt-7">PROTOTYPE DIMENSIONS</div>
-						<div class="nw-project-divider" />
-
-						<div class="flex mt-7">
-							<div class="w-32">Desktop</div>
-							<div><b>{{ design.desktopRes }}</b></div>
-						</div>
-						<div class="flex">
-							<div class="w-32">Mobile</div>
-							<div><b>{{ design.mobileRes }}</b></div>
-						</div>
-
-						<div class="nw-section-divider-title pb-1 mt-7">PROGRAMS</div>
-						<div class="nw-project-divider" />
-
-						<div class="flex gap-4 mt-7">
-							<img :src="require(`~/assets/images/common/${img.file}`)" :alt="img.alt" v-for="( img, imgi ) in design.icons" :key="`img_icon_${imgi}`">
-						</div>
-
-						<div class="nw-section-divider-title pb-1 mt-7">OVERVIEW</div>
-						<div class="nw-project-divider" />
-						<p class="mt-6">{{ design.overview }}</p>
-					</div>
-				</div>
-				<div class="mt-6 ml-6 flex gap-4">
-					<img 
-					width="91px" 
-					height="91px" 
-					src="~/assets/images/designs/Dot Block grey.svg" 
-					alt="Dot Block Grey" 
-					v-for="n in 5"
-					:key="n">
-				</div>
-			</div>
+			<!-- Fixed Sidebar Block Section -->
+			<div class="nw-project-sidebar-block hidden md:block ml-auto"></div>
 		</div>
 	</div>
 </template>
@@ -178,17 +179,27 @@ export default {
 		}
 		&-sidebar {
 			&-block {
-				max-width: 676px;
+				max-width: 675px;
 				width: 100%;
 			}
 			margin-top: -10px;
-			max-width: 676px;
+			max-width: 675px;
 			width: 100%;
+			@media (--lg) {
+				max-width: 575px;
+			}
+			@media (--md) {
+				margin-top: 0px;
+				max-width: 100%;
+			}
 			>div:first-child {
 				border: 10px solid #2D2932;
-				height: 750px;
+				min-height: 750px;
 				>div {
 					background: #2D2932;
+				}
+				@media (--lg) {
+					min-height: auto;
 				}
 			}
 		}

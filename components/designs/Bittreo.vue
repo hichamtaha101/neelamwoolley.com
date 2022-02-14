@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="pt-20 text-2xl"><h2>UX/UI</h2></div>
+		<div class="text-2xl"><h2>UX/UI</h2></div>
 		<div class="mt-6">
 			<p>I was initially brought into the project at a stage where a most of the work had already been developed without a designer and needed UX/UI refactoring. I have to remain fairly tight-lipped about the details of the platform but below are some screenshots of some select pages from the prototype showing the evolution of the product.</p>
 		</div>

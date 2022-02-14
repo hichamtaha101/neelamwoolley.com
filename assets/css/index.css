@@ -48,6 +48,9 @@ p {
 		padding-top: var(--header-height);
 		min-height: calc(100vh - 60px);
 		background-color: var(--main-color);
+		@media (--xs) {
+			padding-top: 137px;
+		}
 	}
 	&-content-wrap {
 		background-color: var(--main-color);

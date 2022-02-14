@@ -5,7 +5,7 @@
 		<!-- Main Design Section -->
 		<div class="nw-content-wrap z-20 relative ">
 			<div class="nw-section" v-for="(d, index) in designs" :key="index">
-				<section-title :title="d.sectionTitle" :sub-title="d.sectionSubTitle" >
+				<section-title class-names="items-center md:items-start" :title="d.sectionTitle" :sub-title="d.sectionSubTitle" >
 					<template #appendRight>
 						<img class="hidden md:block" width="69px" height="69px" src="~/assets/images/designs/Dot Block grey.svg" alt="Dot Block Grey">
 					</template>

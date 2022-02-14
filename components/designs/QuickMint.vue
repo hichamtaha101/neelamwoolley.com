@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="pt-20 text-2xl"><h2>UX/UI</h2></div>
+		<div class="text-2xl"><h2>UX/UI</h2></div>
 		<div class="mt-6">
 			<p>I was tasked with creating a prototype for the Quickmint NFT e-commerce website. Below are some select screenshots from the prototype. Unfortunately the product is being developed so I can't share the full prototype at this time.</p>
 		</div>

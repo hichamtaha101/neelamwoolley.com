@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="pt-20 text-2xl"><h2>UX/UI</h2></div>
+		<div class="text-2xl"><h2>UX/UI</h2></div>
 		<div class="mt-6">
 			<p>A client of Henesys Group - This was a pilot project for launching the front-end website solution side of Henesys's SaaS. I was hired as the Graphic Designer responsible for the brand and the UI/UX designer for the e-commerce website. Unfortunately im unable to share the full prototype at this time due to the sensitive nature of client work. But you can check out the fully developed site at <a class="underline" href="https://gladiatorbikes.ca" target="_blank">gladiatorbikes.ca</a>.</p>
 		</div>

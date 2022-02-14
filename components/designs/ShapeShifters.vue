@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="pt-20 text-2xl"><h2>UX/UI</h2></div>
+		<div class="text-2xl"><h2>UX/UI</h2></div>
 		<div class="mt-6">
 			<p>I was tasked with creating a prototype for the re-branded Shapshifters studio portfolio website. Below are some select screenshots from the prototype. Unfortunately im unable to share the full prototype at this time due to the sensitive nature of client work. But you can check out the fully developed site at <a class="underline" href="http://shapeshifterscreative.com/" target="_blank">shapeshifterscreative.com</a>.</p>
 		</div>
