@@ -140,6 +140,7 @@ export default {
 			height: 59px;
 			background-color: white;
 			max-width: 550px;
+			width: 100%;
     		transform: skew(-24deg);
 			span {
 				transform: skew(24deg); /* un-skew text. */

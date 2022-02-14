@@ -10,7 +10,7 @@
 				</NuxtLink>
 			</div>
 		<div class="nav-items-wrap">
-			<div class="nav-items flex flex-nowrap xs:flex-wrap gap-4 xs:gap-16 uppercase">
+			<div class="w-full nav-items flex flex-nowrap xs:flex-wrap gap-4 xs:gap-16 uppercase">
 				<div :class="`p-3 cursor-pointer text-center xs:text-left w-full xs:w-auto hover:opacity-80 transition-opacity`">
 					<NuxtLink to="/design">
 						Design
