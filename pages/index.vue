@@ -75,7 +75,7 @@
 				<section-title title="A Little Bit" class-names="items-center md:items-start" sub-title="About What I Do"/>
 				<div class="mt-12 mb-4 text-white" style="max-width: 800px;">
 					<p>Welcome to my Portfolio website. Here you'll find the most recent examples of my project work. My skills include, UI/UX Design, digital and traditional illustration, motion graphics and front end development. I specialize in creating high fidelity prototypes that are development ready.</p>
-					<p>My Portfolio is a blend of all my strengths: UI/UX design, Graphic Design and Illustration. I hope you enjoy it as much as I did creating it. Below you will find links to my current featured projects.</p>
+					<p class="mt-6">My Portfolio is a blend of all my strengths: UI/UX design, Graphic Design and Illustration. I hope you enjoy it as much as I did creating it. Below you will find links to my current featured projects.</p>
 				</div>
 				<div class="nw-button m-auto md:mx-0 mt-12" @click="$router.push('/design')">
 						<i class="fa fa-square mr-5" />
