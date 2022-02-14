@@ -37,10 +37,9 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-	  // With options
-	  [
-		  '@nuxtjs/vuetify',
-		//   { customVariables: ['~assets/scss/main.scss'] }
+	[
+		'@nuxtjs/vuetify',
+		// { customVariables: ['~assets/scss/main.scss'] }
 	],
 	'@nuxtjs/tailwindcss',
   ],

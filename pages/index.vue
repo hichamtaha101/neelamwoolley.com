@@ -180,7 +180,7 @@ export default {
 		&-section-rectangles {
 			&--extended {
 				width: 25%;
-				height: 436px;
+				height: 478px;
 				background-color: #3d73c0;
 			}
 			>div:nth-child(1) { 
