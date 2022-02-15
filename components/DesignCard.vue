@@ -22,7 +22,10 @@ export default {
 </script>
 <style lang="postcss">
 .nw-design-card {
-	max-width: 383px;
 	width: 100%;
+
+	img {
+		width: 100%;
+	}
 }
 </style>
