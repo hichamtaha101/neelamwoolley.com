@@ -19,7 +19,7 @@
 				<div class="flex items-center"><span>Web Designer and Illustrator</span></div>
 				<img class="relative" src="~/assets/images/homepage/Path 11.svg" alt="Path 11">
 			</div>
-			<div class="flex flex-wrap items-center mt-24 xs:mt-40 gap-8">
+			<div class="flex flex-wrap items-center mt-12 xs:mt-40 gap-8">
 				<div class="nw-button" @click="$router.push('/design')">
 					<i class="fa fa-square mr-5" />
 					View Design Work
@@ -33,7 +33,7 @@
 			<path id="Arrow_Down_Blue" data-name="Arrow Down Blue" d="M5.5,0,11,9H0Z" transform="translate(11 9) rotate(180)" fill="#2f69bb"/>
 			</svg>
 			</div>
-			<img class="absolute right-4 z-10 bottom-4 hidden md:block" src="~/assets/images/homepage/tes.png" alt="tes.png">
+			<img class="absolute right-4 z-10 bottom-4" src="~/assets/images/homepage/tes.png" alt="tes.png">
 		</div>
 		<div class="hero-section__sub-title--extended absolute" />
 		<div class="hero-section__dot-matrix absolute" />
@@ -42,7 +42,7 @@
 
 		<!-- Featured Design Section -->
 		<div class="nw-section">
-			<section-title title="Featured" class-names="items-center md:items-start" sub-title="Web Designs" button-text="View All Projects" button-icon-class-names="fas fa-mouse mr-2" button-link="/design"/>
+			<section-title title="Featured" sub-title="Web Designs" button-text="View All Projects" button-icon-class-names="fas fa-mouse mr-2" button-link="/design"/>
 			<div class="nw-section__content flex flex-wrap gap-4 text-white">
 				<design-card :design="fd" v-for="(fd, index) in featuredDesigns" :key="index" />
 			</div>
@@ -55,7 +55,7 @@
 
 		<!-- Featured Illustration Section -->
 		<div class="nw-section">
-			<section-title title="Featured" class-names="items-center md:items-start" sub-title="Illustration" button-text="View All Projects" button-icon-class-names="fa fa-pencil mr-2" button-link="/illustration"/>
+			<section-title title="Featured" sub-title="Illustration" button-text="View All Projects" button-icon-class-names="fa fa-pencil mr-2" button-link="/illustration"/>
 			<div class="nw-section__content flex flex-wrap gap-4">
 				<illustration-card
 					v-for="( il, ilIndex ) in featuredIllustrations.slice(0, 3)"
@@ -72,7 +72,7 @@
 		<div class="flex pt-0 md:pt-20">
 			<!-- Left Side -->
 			<div class="pt-16 pb-14 m-auto">
-				<section-title title="A Little Bit" class-names="items-center md:items-start" sub-title="About What I Do"/>
+				<section-title title="A Little Bit" sub-title="About What I Do"/>
 				<div class="mt-12 mb-4 text-white" style="max-width: 800px;">
 					<p>Welcome to my Portfolio website. Here you'll find the most recent examples of my project work. My skills include, UI/UX Design, digital and traditional illustration, motion graphics and front end development. I specialize in creating high fidelity prototypes that are development ready.</p>
 					<p class="mt-6">My Portfolio is a blend of all my strengths: UI/UX design, Graphic Design and Illustration. I hope you enjoy it as much as I did creating it. Below you will find links to my current featured projects.</p>

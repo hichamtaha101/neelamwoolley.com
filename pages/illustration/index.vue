@@ -15,7 +15,7 @@
 
 			<!-- Vector -->
 			<div class="nw-section" v-for="(vi, index) in vectorIllustrations" :key="`vi_${index}`">
-				<section-title class-names="items-center md:items-start" :title="vi.sectionTitle" :sub-title="vi.sectionSubTitle" >
+				<section-title :title="vi.sectionTitle" :sub-title="vi.sectionSubTitle" >
 					<template #appendRight>
 						<div class="gap-7 justify-end hidden md:flex">
 							<img 
@@ -48,7 +48,7 @@
 
 			<!-- Raster -->
 			<div class="nw-section" v-for="(ri, index) in rasterIllustrations" :key="`ri_${index}`">
-				<section-title class-names="items-center md:items-start" :title="ri.sectionTitle" :sub-title="ri.sectionSubTitle" >
+				<section-title :title="ri.sectionTitle" :sub-title="ri.sectionSubTitle" >
 					<template #appendRight>
 						<div class="gap-7 justify-end hidden md:flex">
 							<img 
