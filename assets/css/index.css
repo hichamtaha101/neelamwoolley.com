@@ -92,16 +92,9 @@ p {
 	&-section-divider-title {
 		color: #777777;
 	}
-	&-section__title {
-		flex-direction: row;
-		@media (--md) {
-			flex-direction: column;
-		}
-	}
 	&-section__content {
 		margin-top: 68px;
 		@media (--md) {
-			justify-content: center;
 			margin-top: 34px;
 		}
 	}

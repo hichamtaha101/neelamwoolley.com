@@ -1,6 +1,6 @@
 <template>
   <div class="header fixed z-40 w-full">
-	  <div class="nw-wrapper flex h-full justify-center xs:justify-between flex-col xs:flex-row items-center gap-2 xs:gap-0">
+	  <div class="nw-wrapper h-full justify-center xs:justify-between flex-col xs:flex-row items-center gap-2 xs:gap-0">
 		<div class="logo text-2xl uppercase">
 				<NuxtLink to="/">
 				<div class="flex gap-2 py-6 px-4 sm:p-0">
@@ -42,6 +42,9 @@ export default {
 	@media (--xs) {
 		height: auto;
 		.nw-wrapper { padding-left: 0px; padding-right: 0px;}
+	}
+	>div:first-child {
+		display: flex;
 	}
 	.nav-items {
 		&-wrap {

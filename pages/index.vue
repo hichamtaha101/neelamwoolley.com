@@ -43,13 +43,9 @@
 		<!-- Featured Design Section -->
 		<div class="nw-section">
 			<section-title title="Featured" sub-title="Web Designs" button-text="View All Projects" button-icon-class-names="fas fa-mouse mr-2" button-link="/design"/>
-			<!-- <div class="nw-section__content flex-wrap gap-4 text-white flex"> -->
-			<div class="nw-section__content hidden grid-cols-2 xs:grid md:grid-cols-3 lg:grid-cols-4 gap-4 text-white">
+			<div class="nw-section__content grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-white">
 				<design-card :design="fd" v-for="(fd, index) in featuredDesigns" :key="index" />
 			</div>
-			<VueSlickCarousel class="nw-section__content block xs:hidden" v-bind="settings">
-				<design-card class="text-white" :design="fd" v-for="(fd, index) in featuredDesigns" :key="index" />
-			</VueSlickCarousel>
 		</div>
 		<div class="nw-section-divider-title pb-1 flex justify-center md:justify-start">Scroll To Learn More <img src="~/assets/images/common/arrow-down-grey.svg" class="ml-2" alt="Arrow Down"></div>
 		<div>
@@ -75,13 +71,13 @@
 		<!-- About Myself Section -->
 		<div class="flex pt-0 md:pt-20">
 			<!-- Left Side -->
-			<div class="pt-16 pb-14 m-auto">
+			<div class="pt-16 pb-14">
 				<section-title title="A Little Bit" sub-title="About What I Do"/>
 				<div class="mt-12 mb-4 text-white" style="max-width: 800px;">
 					<p>Welcome to my Portfolio website. Here you'll find the most recent examples of my project work. My skills include, UI/UX Design, digital and traditional illustration, motion graphics and front end development. I specialize in creating high fidelity prototypes that are development ready.</p>
 					<p class="mt-6">My Portfolio is a blend of all my strengths: UI/UX design, Graphic Design and Illustration. I hope you enjoy it as much as I did creating it. Below you will find links to my current featured projects.</p>
 				</div>
-				<div class="nw-button m-auto md:mx-0 mt-12" @click="$router.push('/design')">
+				<div class="nw-button mt-12" @click="$router.push('/design')">
 						<i class="fa fa-square mr-5" />
 						View Design Work
 				</div>
@@ -104,31 +100,23 @@ import SectionTitle from '~/components/SectionTitle.vue';
 import DesignCard from '~/components/DesignCard.vue';
 import ShadowButton from '~/components/ShadowButton.vue';
 import designs from '~/assets/js/designs';
-import VueSlickCarousel from 'vue-slick-carousel';
 
 export default {
-	components: { SectionTitle, DesignCard, VueSlickCarousel, ShadowButton },
+	components: { SectionTitle, DesignCard, ShadowButton },
 	data() {
 		return {
 			quote: "I specialize in creating high fidelity prototypes that are development ready.",
 			featuredDesigns: Object.values( designs ).filter( d => !!d.featured === true ),
 			featuredIllustrations: [
-				{ image: 'skull-girl-1.png', name: 'skull girl kasldkal sdals dj' },
+				{ image: 'skull-girl-1.png', name: 'skull girl' },
 				{ image: 'dragon-1.png', name: 'dragon' },
 				{ image: 'line-drawing-2.png', name: 'line drawing' },
 			],
-			settings: {
-				dots: false,
-				arrows: false,
-				infinite: true,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				autoplay: true,
-				autoplaySpeed: 2000,
-				swipeToSlide: true,
-				draggable: true,
-			},
 		}
+	},
+	// Address S3 CloudFront redirect.
+	mounted() {
+		if ( window.location.pathname !== '/' ) { this.$router.push( window.location.pathname ); }
 	}
 };
 </script>
@@ -188,6 +176,11 @@ export default {
 	&-overlay {
 		@media (max-width: 1520px) {
 			display: none;
+		}
+	}
+	.nw-button {
+		@media (--xs) {
+			max-width: 100%;
 		}
 	}
 }

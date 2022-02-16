@@ -29,7 +29,7 @@
 					</template>
 				</section-title>
 
-				<div class="nw-section__content flex flex-wrap justify-center md:justify-start gap-4">
+				<div class="nw-section__content flex flex-wrap gap-4">
 					<illustration-card
 					v-for="( vii, viii ) in vi.images.slice(0, 3)"
 					:illustration="vii"
@@ -61,7 +61,7 @@
 						</div>
 					</template>
 				</section-title>
-				<div class="nw-section__content flex flex-wrap justify-center md:justify-start gap-4">
+				<div class="nw-section__content flex flex-wrap gap-4">
 					<illustration-card
 					v-for="( rii, riii ) in ri.images.slice(0, 3)" 
 					:illustration="rii"

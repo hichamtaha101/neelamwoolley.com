@@ -63,7 +63,6 @@ export default {
 		background: none;
 		flex-direction: column;
 		padding: 0px;
-		align-items: center;
 	}
 	&__content {
 		max-width: 673px;
@@ -75,6 +74,10 @@ export default {
 		box-shadow: 0px 4px 7px #00000040;
 		border-radius: 3px;
 		color: white;
+
+		@media (--md) {
+			max-width: 793px;
+		}
 
 		>div:nth-child(1) {
 			padding: 4px 15px;
