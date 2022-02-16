@@ -58,7 +58,7 @@
 
 
 			<!-- Main Project Content Section -->
-			<div class="nw-project-content">
+			<div class="nw-project-content w-full" style="max-width: 950px;">
 				<div class="items-center mb-20 mt-12 cursor-pointer hover:opacity-90 transition-opacity hidden md:flex" @click="$router.push('/design')">
 					<svg class="mr-4" xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14">
 						<path id="Path_35" data-name="Path 35" d="M169.252,587v14l-12-6.789Z" transform="translate(-157.252 -587)" fill="#fff"/>
@@ -179,10 +179,6 @@ export default {
 			padding-right: 15px;
 			max-width: var(--nw-max-width);
 			background-color: var(--main-color);
-		}
-		&-content {
-			max-width: 950px; 
-			width: 100%
 		}
 		&-sidebar {
 			max-width: 675px;
