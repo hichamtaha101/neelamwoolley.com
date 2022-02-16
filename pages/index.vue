@@ -20,14 +20,14 @@
 				<img class="relative" src="~/assets/images/homepage/Path 11.svg" alt="Path 11">
 			</div>
 			<div class="flex flex-wrap items-center mt-12 xs:mt-40 gap-8">
-				<div class="nw-button" @click="$router.push('/design')">
+				<shadow-button @click="$router.push('/design')">
 					<i class="fa fa-square mr-5" />
 					View Design Work
-				</div>
-				<div class="nw-button" @click="$router.push('/illustration')">
+				</shadow-button>
+				<shadow-button @click="$router.push('/design')">
 					<i class="fa fa-square mr-5" />
 					View Illustration Work
-				</div>
+				</shadow-button>
 			</div>
 			<div class="hero-section__scroll-text absolute flex items-center">Scroll To Learn More <svg style="margin-bottom: 2px" class="ml-2" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
 			<path id="Arrow_Down_Blue" data-name="Arrow Down Blue" d="M5.5,0,11,9H0Z" transform="translate(11 9) rotate(180)" fill="#2f69bb"/>
@@ -43,7 +43,7 @@
 		<!-- Featured Design Section -->
 		<div class="nw-section">
 			<section-title title="Featured" sub-title="Web Designs" button-text="View All Projects" button-icon-class-names="fas fa-mouse mr-2" button-link="/design"/>
-			<div class="nw-section__content flex flex-wrap gap-4 text-white">
+			<div class="nw-section__content grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-white">
 				<design-card :design="fd" v-for="(fd, index) in featuredDesigns" :key="index" />
 			</div>
 		</div>
@@ -98,19 +98,20 @@
 <script>
 import SectionTitle from '~/components/SectionTitle.vue';
 import DesignCard from '~/components/DesignCard.vue';
+import ShadowButton from '~/components/ShadowButton.vue';
 import designs from '~/assets/js/designs';
 
 export default {
-	components: { SectionTitle, DesignCard },
+	components: { SectionTitle, DesignCard, ShadowButton },
 	data() {
 		return {
 			quote: "I specialize in creating high fidelity prototypes that are development ready.",
 			featuredDesigns: Object.values( designs ).filter( d => !!d.featured === true ),
 			featuredIllustrations: [
-				{ image: 'skull-girl-1.png' },
-				{ image: 'dragon-1.png' },
-				{ image: 'line-drawing-2.png' },
-			]
+				{ image: 'skull-girl-1.png', name: 'skull girl' },
+				{ image: 'dragon-1.png', name: 'dragon' },
+				{ image: 'line-drawing-2.png', name: 'line drawing' },
+			],
 		}
 	},
 	// Address S3 CloudFront redirect.
@@ -213,5 +214,14 @@ export default {
 			}
 		}
 	}
+}
+
+.v-item-group {
+	height: 400px !important;
+}
+
+.slick-track {
+	display: flex;
+	gap: 15px;
 }
 </style>

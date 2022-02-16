@@ -12,7 +12,8 @@
 		"@fortawesome/fontawesome-free": "^5.15.4",
 		"@nuxtjs/tailwindcss": "^4.2.1",
 		"core-js": "^3.21.0",
-		"nuxt": "^2.15.8"
+		"nuxt": "^2.15.8",
+		"vue-slick-carousel": "^1.0.6"
 	},
 	"devDependencies": {
 		"@nuxtjs/vuetify": "^1.12.3",

@@ -68,9 +68,13 @@
 				<div class="mt-20 md:mt-0"/>
 				<component :is="design.component" :design="design" />
 				<div class="mt-20 text-2xl"><h2>Similar Projects</h2></div>
-				<div class="py-12 gap-4 flex flex-wrap">
+				<div class="py-12 gap-4 hidden xs:flex flex-wrap">
 					<design-card :design="sp" v-for="(sp, spi) in similarProjects" :key="spi"/>
 				</div>
+
+				<VueSlickCarousel class="py-12 block xs:hidden" v-bind="settings">
+					<design-card :design="sp" v-for="(sp, spi) in similarProjects" :key="spi"/>
+				</VueSlickCarousel>
 			</div>
 
 
@@ -80,6 +84,7 @@
 	</div>
 </template>
 <script>
+import VueSlickCarousel from 'vue-slick-carousel';
 import SectionTitle from '~/components/SectionTitle.vue';
 import DesignCard from '~/components/DesignCard.vue';
 import designs from '~/assets/js/designs';
@@ -105,10 +110,22 @@ export default {
 		RodenGray,
 		ShapeShifters,
 		VancouverBitcoin,
+		VueSlickCarousel,
 	},
 	data() {
 		return {
-			activeView: 'desktop'
+			activeView: 'desktop',
+			settings: {
+				dots: false,
+				arrows: false,
+				infinite: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 2000,
+				swipeToSlide: true,
+				draggable: true,
+			},
 		}
 	},
 	// Simulate Server-Side Request.
