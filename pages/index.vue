@@ -112,6 +112,10 @@ export default {
 				{ image: 'line-drawing-2.png' },
 			]
 		}
+	},
+	// Address S3 CloudFront redirect.
+	mounted() {
+		if ( window.location.pathname !== '/' ) { this.$router.push( window.location.pathname ); }
 	}
 };
 </script>
