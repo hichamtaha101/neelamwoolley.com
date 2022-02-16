@@ -185,6 +185,7 @@ export default {
 			width: 100%
 		}
 		&-sidebar {
+			max-width: 675px;
 			margin-top: -10px;
 			@media (--lg) {
 				max-width: 575px;
