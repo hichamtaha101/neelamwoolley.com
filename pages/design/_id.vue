@@ -1,7 +1,13 @@
 <template>
 	<div class="nw-page design relative z-30">
+		<div class="nw-project-fixed-mobile-back fixed md:hidden left-0 w-full text-white bg-black p-6 z-20 cursor-pointer" @click="$router.push('/design')">
+			<svg class="mr-4 inline-block mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14">
+				<path id="Path_35" data-name="Path 35" d="M169.252,587v14l-12-6.789Z" transform="translate(-157.252 -587)" fill="#fff"/>
+			</svg>
+			<div class="inline-block">Back to Projects</div>
+		</div>
 		<!-- Fixed Sidebar Section -->
-		<div class="nw-project-sidebar block md:fixed right-0 z-30 text-white">
+		<div class="nw-project-sidebar relative md:fixed right-0 z-30 text-white w-full">
 			<div class="p-0 md:pl-3 md:pb-3">
 				<div class="h-full px-3 py-12 md:p-11">
 					<section-title :title="design.sectionTitle" :subTitle="design.sectionSubTitle"/>
@@ -53,14 +59,15 @@
 
 			<!-- Main Project Content Section -->
 			<div class="nw-project-content">
-				<div class="flex items-center mb-20 mt-12 cursor-pointer hover:opacity-90 transition-opacity" @click="$router.push('/design')">
+				<div class="items-center mb-20 mt-12 cursor-pointer hover:opacity-90 transition-opacity hidden md:flex" @click="$router.push('/design')">
 					<svg class="mr-4" xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14">
 						<path id="Path_35" data-name="Path 35" d="M169.252,587v14l-12-6.789Z" transform="translate(-157.252 -587)" fill="#fff"/>
 					</svg>
 					Back To Projects
 				</div>
+				<div class="mt-20 md:mt-0"/>
 				<component :is="design.component" :design="design" />
-				<div class="pt-20 text-2xl"><h2>Similar Projects</h2></div>
+				<div class="mt-20 text-2xl"><h2>Similar Projects</h2></div>
 				<div class="py-12 gap-4 flex flex-wrap">
 					<design-card :design="sp" v-for="(sp, spi) in similarProjects" :key="spi"/>
 				</div>
@@ -68,7 +75,7 @@
 
 
 			<!-- Fixed Sidebar Block Section -->
-			<div class="nw-project-sidebar-block hidden md:block ml-auto"></div>
+			<div class="nw-project-sidebar-block hidden md:block ml-auto w-full"></div>
 		</div>
 	</div>
 </template>
@@ -147,6 +154,9 @@ export default {
 		&-divider {
 			@add-mixin dotted-line-styles var(--main-color);
 		}
+		&-fixed-mobile-back {
+
+		}
 		&-nda-locked {
 			border-radius: 3px;
 			border: 5px solid #FFFFFF;
@@ -180,11 +190,9 @@ export default {
 		&-sidebar {
 			&-block {
 				max-width: 675px;
-				width: 100%;
 			}
 			margin-top: -10px;
 			max-width: 675px;
-			width: 100%;
 			@media (--lg) {
 				max-width: 575px;
 			}

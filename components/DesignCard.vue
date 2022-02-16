@@ -1,5 +1,5 @@
 <template>
-	<div style="background: #282828" class="nw-design-card p-3 flex flex-col">
+	<div :class="`nw-design-card p-3 flex-col w-full max-w-none xs:max-w-sm ${classNames}`">
 		<img v-if="design.imgRef" :src="require(`~/assets/images/designs/${design.imgRef}`)" :alt="design.imgAlt">
 		<div class="uppercase mt-9">{{ design.title }}</div>
 		<div class="pt-2 text-sm"><i class="fa fa-tag mr-1" style="color: #3069bb"/>{{ design.tag }}</div>
@@ -16,13 +16,14 @@
 <script>
 export default {
 	props: {
-		design: { type: Object, required: true, default: () => ({}) }
+		design: { type: Object, required: true, default: () => ({}) },
+		classNames: { type: String, required: false, default: '' },
 	}
 }
 </script>
 <style lang="postcss">
 .nw-design-card {
-	max-width: 383px;
-	width: 100%;
+	display: flex;
+	background: #282828
 }
 </style>

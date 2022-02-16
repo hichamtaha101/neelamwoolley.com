@@ -1,5 +1,5 @@
 <template>
-	<div :class="`nw-section__title text-white uppercase flex gap-4 justify-between ${classNames}`">
+	<div :class="`nw-section__title flex-col xs:flex-row text-white uppercase flex gap-4 justify-between ${classNames}`">
 		<div class="flex">
 			<img src="~/assets/images/homepage/heading shapes.svg" alt="heading shape">
 			<div class="pl-1">
@@ -26,3 +26,12 @@ export default {
 	}
 }
 </script>
+<style lang="postcss">
+.nw-section__title {
+	.nw-button {
+		@media (--xs) {
+			max-width: 100%;
+		}
+	}
+}
+</style>
