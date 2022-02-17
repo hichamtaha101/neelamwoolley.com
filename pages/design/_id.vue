@@ -69,7 +69,7 @@
 				<component :is="design.component" :design="design" />
 				<div class="mt-20 text-2xl"><h2>Similar Projects</h2></div>
 				<div class="py-12 gap-4 hidden xs:flex flex-wrap">
-					<design-card :design="sp" v-for="(sp, spi) in similarProjects" :key="spi"/>
+					<design-card class-names="max-w-none xs:max-w-sm" :design="sp" v-for="(sp, spi) in similarProjects" :key="spi"/>
 				</div>
 
 				<VueSlickCarousel class="py-12 block xs:hidden" v-bind="settings">

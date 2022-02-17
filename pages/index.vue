@@ -108,9 +108,9 @@ export default {
 			quote: "I specialize in creating high fidelity prototypes that are development ready.",
 			featuredDesigns: Object.values( designs ).filter( d => !!d.featured === true ),
 			featuredIllustrations: [
-				{ image: 'skull-girl-1.png', name: 'skull girl' },
+				{ image: 'skull-girl-1.png', name: 'skull' },
 				{ image: 'dragon-1.png', name: 'dragon' },
-				{ image: 'line-drawing-2.png', name: 'line drawing' },
+				{ image: 'line-drawing-2.png', name: 'kitsune' },
 			],
 		}
 	},

@@ -1,6 +1,6 @@
 <template>
 	<div class="nw-section__content__illustration relative">
-	<img class="h-full" :src="require(`~/assets/images/illustration/${illustration.image}`)" :alt="illustration.alt || 'illustration image'">
+	<img class="h-auto xs:h-full" :src="require(`~/assets/images/illustration/${illustration.image}`)" :alt="illustration.alt || 'illustration image'">
 		<div class="arrow-wrapper">
 			<div class="left-triangle left-triangle--right">
 				<img class="arrow-image" src="~/assets/images/common/skinny-arrow-right-blue.svg" alt="Arrow Right">
@@ -100,9 +100,9 @@ export default {
 		align-items: center;
 
 		&::before {
-			left: -19.5px;
+			left: -20px;
 			border-bottom: 50px solid #f4f4f4;
-			border-left: 20px solid transparent;
+			border-left: 21px solid transparent;
 		}
 	}
 }
