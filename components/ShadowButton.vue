@@ -1,5 +1,5 @@
 <template>
-<div class="nw-button nw-button--shadow">
+<div class="nw-button nw-button--shadow" @click="$emit('click')">
 	<slot/>
 	<div class="nw-button__shadow"/>
 </div>
