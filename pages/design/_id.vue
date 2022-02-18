@@ -72,7 +72,7 @@
 					<design-card :design="sp" v-for="(sp, spi) in similarProjects" :key="spi"/>
 				</div>
 
-				<VueSlickCarousel class="py-12 block xs:hidden" v-bind="settings">
+				<VueSlickCarousel class="py-12 block xs:hidden overflow-hidden" v-bind="settings">
 					<design-card :design="sp" v-for="(sp, spi) in similarProjects" :key="spi"/>
 				</VueSlickCarousel>
 			</div>
