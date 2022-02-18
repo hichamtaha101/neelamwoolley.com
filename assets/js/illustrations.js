@@ -4,9 +4,9 @@ module.exports = [
 		sectionTitle: 'Vector',
 		sectionSubTitle: 'Crocodiles',
 		images: [
-			{ image: 'crocodile-1.png' },
-			{ image: 'crocodile-2.png' },
-			{ image: 'crocodile-3.png' },
+			{ image: 'crocodile-1.png', name: 'vol.01' },
+			{ image: 'crocodile-2.png', name: 'vol.02' },
+			{ image: 'crocodile-3.png', name: 'vol.03' },
 		]
 	},
 	{
@@ -14,9 +14,9 @@ module.exports = [
 		sectionTitle: 'Vector',
 		sectionSubTitle: 'Environments',
 		images: [
-			{ image: 'environment-1.png' },
-			{ image: 'environment-2.png' },
-			{ image: 'environment-3.png' },
+			{ image: 'environment-1.png', name: 'vol.01' },
+			{ image: 'environment-2.png', name: 'vol.02' },
+			{ image: 'environment-3.png', name: 'vol.03' },
 		]
 	},
 	{
@@ -24,8 +24,8 @@ module.exports = [
 		sectionTitle: 'Dragon',
 		sectionSubTitle: 'Series',
 		images: [
-			{ image: 'dragon-1.png' },
-			{ image: 'dragon-2.png' },
+			{ image: 'dragon-1.png', name: 'vol.01' },
+			{ image: 'dragon-2.png', name: 'vol.02' },
 		]
 	},
 	{
@@ -33,8 +33,8 @@ module.exports = [
 		sectionTitle: 'Skull',
 		sectionSubTitle: 'Series',
 		images: [
-			{ image: 'skull-girl-1.png' },
-			{ image: 'skull-girl-2.png' },
+			{ image: 'skull-girl-1.png', name: 'vol.01' },
+			{ image: 'skull-girl-2.png', name: 'vol.02' },
 		]
 	},
 	{
@@ -42,8 +42,8 @@ module.exports = [
 		sectionTitle: 'Line',
 		sectionSubTitle: 'Drawings',
 		images: [
-			{ image: 'line-drawing-1.png' },
-			{ image: 'line-drawing-2.png' },
+			{ image: 'line-drawing-1.png', name: 'vol.01' },
+			{ image: 'line-drawing-2.png', name: 'vol.02' },
 		]
 	},
 	{
@@ -51,7 +51,7 @@ module.exports = [
 		sectionTitle: 'Traditional',
 		sectionSubTitle: 'Line Drawings',
 		images: [
-			{ image: 'traditional-line-drawing-1.png' }
+			{ image: 'traditional-line-drawing-1.png', name: 'vol.01' }
 		]
 	},
 ];
