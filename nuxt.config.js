@@ -41,8 +41,12 @@ export default {
 		'@nuxtjs/vuetify',
 		// { customVariables: ['~assets/scss/main.scss'] }
 	],
+	'@nuxt/image',
 	'@nuxtjs/tailwindcss',
   ],
+  image: {
+	dir: 'assets/images'
+  }, // Needed for nuxt-img.
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],

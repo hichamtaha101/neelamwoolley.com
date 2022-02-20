@@ -22,7 +22,8 @@
 							width="69px" 
 							height="69px" 
 							src="~/assets/images/designs/Dot Block grey.svg" 
-							alt="Dot Block Grey" 
+							alt="Dot Block Grey"
+							loading="lazy"
 							v-for="n in index + 1"
 							:key="`vi_${n}_dot`">
 						</div>
@@ -54,6 +55,7 @@
 							<img 
 							width="69px" 
 							height="69px" 
+							loading="lazy"
 							src="~/assets/images/designs/Dot Block grey.svg" 
 							alt="Dot Block Grey" 
 							v-for="n in index + vectorIllustrations.length + 1"

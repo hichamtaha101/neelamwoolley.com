@@ -1,6 +1,6 @@
 <template>
 	<div class="nw-section__content__illustration relative">
-	<img class="h-auto xs:h-full" :src="require(`~/assets/images/illustration/${illustration.image}`)" :alt="illustration.alt || 'illustration image'">
+	<img class="h-auto xs:h-full" :src="require(`~/assets/images/illustration/${illustration.image}`)" :alt="illustration.alt || 'illustration image'" loading="lazy">
 		<div class="arrow-wrapper">
 			<div class="left-triangle left-triangle--right">
 				<img class="arrow-image" src="~/assets/images/common/skinny-arrow-right-blue.svg" alt="Arrow Right">

@@ -7,7 +7,7 @@
 			<div class="nw-section" v-for="(d, index) in designs" :key="index">
 				<section-title :title="d.sectionTitle" :sub-title="d.sectionSubTitle" >
 					<template #appendRight>
-						<img class="hidden md:block" width="69px" height="69px" src="~/assets/images/designs/Dot Block grey.svg" alt="Dot Block Grey">
+						<img class="hidden md:block" width="69px" height="69px" src="~/assets/images/designs/Dot Block grey.svg" alt="Dot Block Grey" loading="lazy">
 					</template>
 				</section-title>
 				<div class="py-4 pr-4 mt-12 nw-section__design flex justify-between gap-4">
@@ -25,7 +25,7 @@
 							</div>
 						</div>
 					</div>
-					<img v-if="d.boxImage" class="w-full" style="max-width: 793px" :src="require(`~/assets/images/designs/${d.boxImage}`)" :alt="d.boxImageAlt">
+					<img v-if="d.boxImage" class="w-full" style="max-width: 793px" :src="require(`~/assets/images/designs/${d.boxImage}`)" :alt="d.boxImageAlt" loading="lazy">
 				</div>
 	  		</div>
 		</div>

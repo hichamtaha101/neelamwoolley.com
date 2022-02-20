@@ -1,6 +1,6 @@
 <template>
 	<div class="relative nw-design-image">
-		<img :src="require(`~/assets/images/designs/${image.imagePath}`)" :alt="image.label">
+		<img :src="require(`~/assets/images/designs/${image.imagePath}`)" :alt="image.label" loading="lazy">
 		<div class="absolute bottom-0 right-0 py-2 px-4 text-md md:text-xl text-left" :style="`min-width: ${labelMinWidth}px`">{{ image.label }}</div>
 	</div>
 </template>

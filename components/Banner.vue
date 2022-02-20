@@ -1,7 +1,7 @@
 <template>
-	<div class="nw-banner relative text-white"> 
-		<img :src="require(`~/assets/images/${imagePath}`)" alt="Banner Image" class="fixed w-full">
-		<img :src="require(`~/assets/images/${imagePath}`)" alt="Banner Image" class="invisible w-full"> <!-- Need this for img dimensions to push parent -->
+	<div class="nw-banner relative text-white">
+		<nuxt-img :src="`/${imagePath}`" alt="Banner Image" class="fixed w-full" loading="lazy"/>
+		<nuxt-img :src="`/${imagePath}`" alt="Banner Image" class="invisible w-full" loading="lazy"/> <!-- Need this for img dimensions to push parent -->
 		<div class="nw-banner__overlay opacity-60 absolute bottom-0" />
 		<div class="nw-banner__border-bottom w-full absolute bottom-0 hidden lg:block" />
 		<div class="nw-banner__learn-more absolute bottom-0 items-center hidden lg:flex">Scroll To Learn More <svg style="margin-bottom: 2px" class="ml-2" xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
