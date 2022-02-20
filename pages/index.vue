@@ -24,7 +24,7 @@
 					<i class="fa fa-square mr-5" />
 					View Design Work
 				</shadow-button>
-				<shadow-button @click="$router.push('/design')">
+				<shadow-button @click="$router.push('/illustration')">
 					<i class="fa fa-square mr-5" />
 					View Illustration Work
 				</shadow-button>
