@@ -4,6 +4,10 @@
 	scroll-behavior: smooth;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 body {
 	font-family: var(--font-0), var(--font-1), var(--font-2), var(--font-3),
 		var(--font-4);
